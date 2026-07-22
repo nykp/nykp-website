@@ -1,0 +1,98 @@
+en:
+  label: English
+  weight: 1
+  ### copyright (markdown can be used) ###
+  copyright: "&copy; {{< current_year >}} New York Kayak Polo, a 501(c)(3) nonprofit organization. Site built with the [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo."
+  title: "New York Kayak Polo"
+  params:
+    description: "New York Kayak Polo is a 100% volunteer-run 501(c)(3) nonprofit developing and promoting the sport of kayak polo in the New York City area. Everybody is welcome — your first session is free!"
+    ### accessibility ###
+    accessibility:
+      skip_text: "Skip to content"
+      help_text: "Contact us"
+      help_url: "/contact/"
+    ### calls to action ###
+    main_cta:
+      text: "Join us on Meetup"
+      link: "https://www.meetup.com/NYkayakpolo/"
+    footer_cta:
+      text: "Your first session is free"
+      link: "/membership/"
+  menu:
+    main:
+    - identifier: "play"
+      name: "Play"
+      url: "/schedule/"
+      weight: 1
+    - identifier: "schedule"
+      name: "Schedule"
+      url: "/schedule/"
+      weight: 1
+      parent: "play"
+    - identifier: "membership"
+      name: "Membership"
+      url: "/membership/"
+      weight: 2
+      parent: "play"
+    - identifier: "location"
+      name: "Location"
+      url: "/location/"
+      weight: 3
+      parent: "play"
+    - identifier: "about"
+      name: "About Us"
+      url: "/about/"
+      weight: 2
+    - identifier: "game"
+      name: "The Game"
+      url: "/game/"
+      weight: 3
+    - identifier: "events"
+      name: "Events"
+      url: "/events/"
+      weight: 4
+    - identifier: "links"
+      name: "Links"
+      url: "/links/"
+      weight: 5
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 6
+    footer:
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 1
+    - identifier: "game"
+      name: "The Game"
+      url: "/game/"
+      weight: 2
+    - identifier: "schedule"
+      name: "Schedule"
+      url: "/schedule/"
+      weight: 3
+    - identifier: "membership"
+      name: "Membership"
+      url: "/membership/"
+      weight: 4
+    - identifier: "location"
+      name: "Location"
+      url: "/location/"
+      weight: 5
+    - identifier: "events"
+      name: "Events"
+      url: "/events/"
+      weight: 6
+    - identifier: "links"
+      name: "Links"
+      url: "/links/"
+      weight: 7
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 8
+    - identifier: "meetup"
+      name: "Meetup Group"
+      url: "https://www.meetup.com/NYkayakpolo/"
+      weight: 9

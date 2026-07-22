@@ -1,0 +1,20 @@
+[workspace]
+authors = ["Erik Schomburg <eschomburg@gmail.com>"]
+channels = ["conda-forge"]
+name = "nykp-website"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+# Install the Node build dependencies (PostCSS + Dart Sass). Run once after cloning.
+setup = "npm install"
+# Start the local dev server with live reload at http://localhost:1313
+dev = { cmd = "hugo server --configDir=config --buildDrafts --buildFuture --disableFastRender", depends-on = ["setup"] }
+# Build the production site into ./public
+build = { cmd = "hugo --environment=production --configDir=config --gc --minify", depends-on = ["setup"] }
+# Build the Pagefind search index (run after build)
+index = "npx -y pagefind --site public"
+
+[dependencies]
+hugo = ">=0.164.0,<0.165"
+nodejs = ">=26.5.0,<26.6"

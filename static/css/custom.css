@@ -1,0 +1,115 @@
+/* ==========================================================================
+   New York Kayak Polo — brand overrides
+   Palette from the logo: black, yellow, blue (replaces the theme's green).
+   Loaded after the theme stylesheet via params.custom_css, so these win.
+   ========================================================================== */
+
+:root {
+  /* Replace the theme's green "primary" ramp with NYKP logo blue */
+  --primary-400: #2f7cc4; /* accents, secondary/tertiary buttons, quote/heading accents */
+  --primary-500: #2569a8; /* secondary/tertiary button hover */
+  --primary-600: #1f6cb0; /* link color */
+  --primary-700: #1f5c94; /* primary button background, link hover */
+  --primary-800: #163f66; /* primary button hover */
+
+  /* Brand accent */
+  --nykp-yellow: #f5c518;
+  --nykp-yellow-dark: #e0b400;
+}
+
+/* Header call-to-action: brand yellow with black text for a strong, on-brand pop */
+.button.main-menu-cta,
+.button.main-menu-cta:hover,
+.button.main-menu-cta:active {
+  background-color: var(--nykp-yellow);
+  color: #000;
+}
+.button.main-menu-cta:hover,
+.button.main-menu-cta:active {
+  background-color: var(--nykp-yellow-dark);
+}
+
+/* Yellow underline accent on section headings */
+.content h2 {
+  border-bottom: 3px solid var(--nykp-yellow);
+  padding-bottom: 0.2em;
+}
+
+/* The theme only ships columns-2/3/4. Define a 5-up layout so the leadership
+   committee headshots share the full width and render larger (instead of
+   falling back to 1/12-width columns). */
+.columns-5 > * {
+  grid-column: span 12;
+}
+@media (min-width: 600px) {
+  .columns-5 > * {
+    grid-column: span 6; /* 2-up on tablets */
+  }
+}
+@media (min-width: 1000px) {
+  .columns-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .columns-5 > * {
+    grid-column: span 1; /* 5-up on desktop */
+  }
+}
+/* Make the headshots fill their column. The theme only sets max-width:100%,
+   so images otherwise sit at their natural 150px with empty space around them.
+   NOTE: the source photos are only 150x150, so filling a wider column upscales
+   them and softens quality — higher-res photos would display larger and crisp. */
+.columns-5 img {
+  width: 100%;
+}
+
+/* Bigger logo in the top nav bar (theme caps it at 40px/50px tall) */
+.header .logo {
+  max-width: none;
+  max-height: 56px;
+}
+@media (min-width: 1000px) {
+  .header .logo {
+    max-height: 72px;
+  }
+}
+
+/* The footer is black and the round logo has black text, so give it a light
+   circular chip so it stays legible. */
+.footer .logo {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+/* Tighter spacing between paragraphs (theme default is a 24px gap) */
+.content p {
+  margin-bottom: 0;
+}
+.content p + p,
+.content ul + p,
+.content ol + p {
+  margin-top: 14px;
+}
+
+/* Image buttons (Meetup / Donate graphics dropped in static/img/buttons/) */
+.img-button {
+  display: inline-block;
+  /* No vertical margin — let the paragraph spacing (p + p) control the gap so
+     the button follows the same rhythm as body text. Right margin separates
+     side-by-side buttons. */
+  margin: 0 8px 0 0;
+  line-height: 0;
+  transition: opacity 0.15s ease;
+}
+.img-button:hover {
+  opacity: 0.85;
+}
+.img-button img {
+  height: 54px;
+  width: auto;
+}
+/* Larger variant — add class "img-button--lg" (used for the Meetup button) */
+.img-button--lg img {
+  height: 76px;
+}

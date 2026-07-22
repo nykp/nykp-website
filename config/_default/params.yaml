@@ -1,0 +1,43 @@
+######################## custom scripts & styles ####################
+
+# Logo shown in the header (and footer). The round NYKP logo reads well on
+# both light and dark backgrounds.
+logo_on_white: "/img/logo.png"
+logo_on_black: "/img/logo.png"
+custom_js: []
+# NYKP brand overrides (black/yellow/blue palette, image buttons, footer logo chip)
+custom_css: ["/css/custom.css"]
+
+######################## custom config ####################
+
+### default social share image (can also be set per lang) ###
+images: ["/img/action-1.jpg"]
+
+# No public source repo yet, so hide the "Edit this page" links.
+github:
+  repo_url: ""
+  show_edit_link: false
+
+social_links:
+  devstats: ""
+  discord: ""
+  facebook: "https://www.facebook.com/NYKayakPolo/"
+  flickr: ""
+  github: ""
+  instagram: "https://www.instagram.com/newyorkkayakpolo/"
+  landscape: ""
+  linkedin: ""
+  mastodon: ""
+  pinterest: ""
+  rss: ""
+  slack: ""
+  stackoverflow: ""
+  threads: ""
+  twitter: "https://twitter.com/nykayakpolo"
+  x: "https://twitter.com/nykayakpolo"
+  youtube: ""
+
+# Makes the header sticky on tall screens
+sticky_header: true
+# Enable search in header UI
+show_search: true

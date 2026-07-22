@@ -1,0 +1,6 @@
+{{/* Home page: render only the _index.md content.
+     Overrides the theme's _default/list.html, which also loops over .Pages
+     and would otherwise append every other page's title + summary here. */}}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

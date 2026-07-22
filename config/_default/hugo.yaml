@@ -1,0 +1,28 @@
+######################## default configuration ####################
+# Theme
+theme: "dot-org-hugo-theme"
+# Title of your website
+title: "New York Kayak Polo"
+# Default time zone for time stamps
+timeZone: "America/New_York"
+# Minimum number of words to render in a summary
+summaryLength: 50
+
+######################## i18n ####################
+hasCJKLanguage: false
+# Single-language site: content lives in content/en, served at the root
+contentDir: content/en/
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+######################## privacy & speed ####################
+privacy:
+  youtube:
+    privacyEnhanced: true
+  vimeo:
+    enableDNT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

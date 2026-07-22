@@ -1,0 +1,66 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  # Build on every push to the main branch
+  push:
+    branches: ["main"]
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+# Permissions the workflow needs to publish to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one deploy at a time; don't cancel an in-progress run
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (with theme submodule)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # pixi.lock is the single source of truth for the Hugo + Node versions,
+      # so CI builds with exactly the same toolchain as a developer's machine.
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.10.0
+        with:
+          # Fail if pixi.lock is out of date with pixi.toml
+          locked: true
+          cache: true
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # `pixi run build` also runs the `setup` task (npm install) first.
+      # Trailing args are appended to the task's hugo command; --baseURL wins.
+      - name: Build site
+        run: pixi run build --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Build Pagefind search index
+        run: pixi run index
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
