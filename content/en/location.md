@@ -16,10 +16,15 @@ We play at two locations through the year: outdoors on the Hudson River in the s
 
 Pier 66 Boathouse, W 26th St & West Side Highway — the summer home of New York Kayak Polo, just 3 blocks north of Chelsea Piers.
 
+Water conditions:
+- Approximate tide and current predictions: https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12
+- Waterbody Advisories: https://nycwaterbodyadvisory.azurewebsites.net/
+
 **By subway/bus:** Take the M23 crosstown bus, which runs across 23rd Street and stops right in front of Chelsea Piers. The M23 connects with all major subway lines that stop at 23rd Street: the C & E on 8th Ave, the 1 on 7th Ave, the F and PATH trains on 6th Ave, the N & R on Broadway, and the 6 on Lexington.
 
-**Parking:** Available at Chelsea Piers, three blocks south of our home at 26th Street. Once you have parked, follow the pedestrian walkway north along the waterfront to Pier 66.
+**Parking:** Some street parking may be available on or adjacent to 26th St. More (paid) parking is available at Chelsea Piers, three blocks south of our home at 26th Street. Once you have parked, follow the pedestrian walkway north along the waterfront to Pier 66.
 {{< /column >}}
+
 {{< column >}}
 ## Winter — St. Peter's University, Jersey City
 
@@ -33,6 +38,7 @@ The pool is in a large brown building on Montgomery, almost opposite Fairmount T
 
 **Parking:** Available in the University lot on Montgomery Street.
 {{< /column >}}
+
 {{< /columns >}}
 
 ## Can I get a ride?
