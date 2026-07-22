@@ -26,27 +26,27 @@ Members elect a **Leadership Committee** each year to handle the club's day-to-d
 {{< column >}}
 {{< img src="/img/team/adam.jpg" >}}
 **Adam Brodheim**
-President
+{{< br >}} President
 {{< /column >}}
 {{< column >}}
 {{< img src="/img/team/erik.jpg" >}}
 **Erik Schomburg**
-Vice President
+{{< br >}} Vice President
 {{< /column >}}
 {{< column >}}
 {{< img src="/img/team/pin.jpg" >}}
 **Pin Thienapirak**
-Treasurer
+{{< br >}} Treasurer
 {{< /column >}}
 {{< column >}}
 {{< img src="/img/placeholder-headshot.jpg" >}}
 **Surasit "Pong" Nithikasem**
-Secretary
+{{< br >}} Secretary
 {{< /column >}}
 {{< column >}}
 {{< img src="/img/placeholder-headshot.jpg" >}}
 **Kate Eyerman**
-Officer at Large
+{{< br >}} Officer at Large
 {{< /column >}}
 {{< /columns >}}
 
