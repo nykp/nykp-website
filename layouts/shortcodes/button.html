@@ -1,0 +1,5 @@
+{{- /* Overrides the theme's button shortcode to open external links (http/https)
+       in a new tab with rel="noopener". Internal links are unchanged. */ -}}
+{{- $link := .Get "link" -}}
+{{- $external := or (hasPrefix $link "http://") (hasPrefix $link "https://") -}}
+<a href="{{ $link }}" class="{{ with .Get "style" }}{{ if eq . "secondary" }}button secondary{{ else if eq . "tertiary" }}button tertiary{{ else }}button{{ end }}{{ else }}button{{ end }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Get "text" }}</a>
