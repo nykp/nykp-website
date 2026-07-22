@@ -53,6 +53,7 @@ All page text is in **`content/en/`** as Markdown — edit these, no coding requ
 
 - **Navigation menu, footer, social links, and calls-to-action** live in
   `config/_default/languages.yaml` and `config/_default/params.yaml`.
+- **Outstanding content tasks** are tracked in [`TODO.md`](TODO.md).
 - **Images** live in `static/img/`. The logo and action photos were migrated from the
   old WordPress site; image buttons (Meetup, Donate) are in `static/img/buttons/`.
 - **Colors and brand tweaks** are in `static/css/custom.css` (loaded after the theme's
