@@ -39,13 +39,13 @@ Members elect a **Leadership Committee** each year to handle the club's day-to-d
 {{< br >}} Treasurer
 {{< /column >}}
 {{< column >}}
-{{< img src="/img/placeholder-headshot.jpg" >}}
-**Surasit "Pong" Nithikasem**
+{{< img src="/img/team/kate.jpg" >}}
+**Kate Eyerman**
 {{< br >}} Secretary
 {{< /column >}}
 {{< column >}}
-{{< img src="/img/placeholder-headshot.jpg" >}}
-**Kate Eyerman**
+{{< img src="/img/team/pong.jpg" >}}
+**Surasit "Pong" Nithikasem**
 {{< br >}} Officer at Large
 {{< /column >}}
 {{< /columns >}}
