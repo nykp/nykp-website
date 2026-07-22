@@ -18,3 +18,4 @@ index = "npx -y pagefind --site public"
 [dependencies]
 hugo = ">=0.164.0,<0.165"
 nodejs = ">=26.5.0,<26.6"
+dart-sass = ">=1.101.3,<2"

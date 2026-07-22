@@ -10,6 +10,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/c-ares-1.34.8-hb03c661_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.6.17-hbd8a1cb_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/dart-sass-1.101.3-hfc2019e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/hugo-0.164.0-hc83c272_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-78.3-h33c6efd_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libabseil-20260526.0-cxx17_h7b12aa8_1.conda
@@ -31,6 +32,7 @@ environments:
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/c-ares-1.34.8-h84a0fba_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.6.17-hbd8a1cb_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/dart-sass-1.101.3-h820172f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/hugo-0.164.0-ha4d9615_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/icu-78.3-hef89b57_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libabseil-20260526.0-cxx17_h2062a1b_1.conda
@@ -87,6 +89,20 @@ packages:
   license: ISC
   size: 128866
   timestamp: 1781708962055
+- conda: https://conda.anaconda.org/conda-forge/linux-64/dart-sass-1.101.3-hfc2019e_0.conda
+  sha256: 69536500f63f975797c5d5783e39c44a10d6df18a618e439794025607bfef5c6
+  md5: 25aa9feec8bc49793e99f2309b0498c9
+  license: MIT
+  license_family: MIT
+  size: 4102233
+  timestamp: 1784613983631
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/dart-sass-1.101.3-h820172f_0.conda
+  sha256: fe3c652bd917df379887a6dcd4433e7d59da1f666350ec681f37335ae79c9f89
+  md5: 3e77cec4663f3011fc510d44b0be0967
+  license: MIT
+  license_family: MIT
+  size: 3764220
+  timestamp: 1784613997813
 - conda: https://conda.anaconda.org/conda-forge/linux-64/hugo-0.164.0-hc83c272_0.conda
   sha256: 3c6c4a6e11e726a62a4c714d3280d455e80e76f2417fa3875c24ce718a2aff30
   md5: f2046a91afc72270485d553ccdd10c3a
