@@ -1,0 +1,26 @@
+{{- /*
+  Spam-resistant email link. The full address is never emitted as a contiguous
+  string in the HTML — the user and domain are split into data-* attributes and
+  reassembled into a clickable mailto by static/js/email.js on page load.
+  Without JS, a human-readable fallback ("info [at] nykayakpolo [dot] org") shows.
+
+  Emitted as a single inline element (no surrounding whitespace) so it composes
+  cleanly with markdown, e.g. **{{< email "info@nykayakpolo.org" >}}**.
+
+  Usage:
+    {{< email "info@nykayakpolo.org" >}}
+    {{< email addr="info@nykayakpolo.org" label="Send us an email" class="button" subject="Website enquiry" >}}
+*/ -}}
+{{- $addr := .Get "addr" | default (.Get 0) -}}
+{{- $parts := split $addr "@" -}}
+{{- $user := index $parts 0 -}}
+{{- $domain := index $parts 1 -}}
+{{- $label := or (.Get "label") "" -}}
+{{- $class := or (.Get "class") "" -}}
+{{- $subject := or (.Get "subject") "" -}}
+{{- $fallback := printf "%s [at] %s" $user (replace $domain "." " [dot] ") -}}
+{{- $text := cond (ne $label "") $label $fallback -}}
+{{- $classAttr := cond (ne $class "") (printf " %s" $class) "" -}}
+{{- $subjectAttr := cond (ne $subject "") (printf ` data-subject="%s"` $subject) "" -}}
+{{- $labelAttr := cond (ne $label "") ` data-label="true"` "" -}}
+{{- printf `<a class="email-link%s" data-user="%s" data-domain="%s"%s%s>%s</a>` $classAttr $user $domain $subjectAttr $labelAttr $text | safeHTML -}}

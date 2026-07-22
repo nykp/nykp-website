@@ -37,7 +37,7 @@ Full membership privileges with unlimited year-round game play.
 
 {{< spacer 10 >}}
 
-Send money by **Zelle (preferred)** or **PayPal** to [NewYorkKayakPolo@gmail.com](mailto:NewYorkKayakPolo@gmail.com).
+Send money by **Zelle (preferred)** or **PayPal** to {{< email "NewYorkKayakPolo@gmail.com" >}}.
 
 ## Member benefits
 

@@ -4,7 +4,8 @@
 # both light and dark backgrounds.
 logo_on_white: "/img/logo.png"
 logo_on_black: "/img/logo.png"
-custom_js: []
+# Reassembles spam-obfuscated email links (see layouts/shortcodes/email.html)
+custom_js: ["/js/email.js"]
 # NYKP brand overrides (black/yellow/blue palette, image buttons, footer logo chip)
 custom_css: ["/css/custom.css"]
 

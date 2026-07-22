@@ -13,12 +13,12 @@ The best way to reach us — and to sign up for sessions — is through our Meet
 #### Email us
 General questions, membership, waivers, and press:
 
-**[info@nykayakpolo.org](mailto:info@nykayakpolo.org)**
+**{{< email "info@nykayakpolo.org" >}}**
 
 For membership payments by Zelle or PayPal:
-**[NewYorkKayakPolo@gmail.com](mailto:NewYorkKayakPolo@gmail.com)**
+**{{< email "NewYorkKayakPolo@gmail.com" >}}**
 {{< spacer 5 >}}
-{{< button link="mailto:info@nykayakpolo.org" text="Send us an email" >}}
+{{< email addr="info@nykayakpolo.org" label="Send us an email" class="button" >}}
 {{< /card >}}
 {{< card >}}
 #### Come play
