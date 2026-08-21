@@ -1,41 +1,41 @@
 ---
 title: "The Game"
-description: "Kayak polo (canoe polo) explained — the rules, the pitch, the goals, referees, and timing."
+description: "Kayak polo (canoe polo) explained — how the game is played, the pitch, the goals, and how a match is timed."
 images: ["/img/action-2.jpg"]
 ---
 
 {{< intro >}}
-The game, known as kayak polo or canoe polo, is played in many countries on all continents, for recreation and competition. The sport has World Championships every two years, and is organized internationally by the Canoe Polo committee of the International Canoe Federation.
+Kayak polo — canoe polo, officially — is a five-a-side ball sport played in kayaks. It is fast, physical, and easier to follow than it looks: think water polo or basketball, played by people who can also spin, sprint, and capsize their boats.
 {{< /intro >}}
 
-The game is often described as a combination of water polo, basketball, and kayaking slalom (and maybe bumper boats). The tactics and playing of the game are not unlike basketball or water polo, but with the added complexity of maneuvering and tactically utilizing your boat.
+Two teams of five try to throw a ball into a goal suspended two meters above the water at the far end of the pitch. Players pass by hand, block with their paddles, and use their boats to hold position and shut down space. The ball moves quickly, the boats move quickly, and the whole thing takes place in a space about the size of a basketball court.
 
-## The Rules
+What makes it its own sport is the boat. Every decision is also a boat decision — where you are pointing, how fast you are moving, whether you can turn before the player you are marking does. Contact is part of the game, so is going over, and so is coming back up.
 
-The ball, a water polo ball, is passed from hand-to-hand among the players, with some use of the paddle on the ball also allowed. A player in possession can be hand-tackled by being pushed over on the shoulder or back. (We won't push you over until you are comfortable with hand-rolling, and even experienced players may ask not to be pushed during practice and informal games.) Players may only have the ball in their possession for a maximum of five seconds. Players can dribble the ball by throwing it one meter or more into the water to reset the count. Most of the rules concern the safety of the players involved.
+The sport is played on every continent, for recreation and at a high competitive level, with World Championships every two years. It is governed internationally by the Canoe Polo Committee of the [International Canoe Federation](https://www.canoeicf.com/disciplines/canoe-polo).
 
-In particular, it is illegal to place your paddle near another player's hand when they are reaching for the ball or throwing. It is also illegal to hit another player's body with your paddle or boat, or to ram their boat at high speed at or near a right angle. Only five players from a team are allowed on the pitch at the same time; an additional player is considered an illegal substitution. Another rule concerns illegal obstruction: you can't block or interfere with an opposing player unless you are going for the ball or defending your goal area (within a 6-meter zone).
+## How it's played
 
-The penalty for a rule violation is loss of possession, but may also include goal penalty shots (like penalty kicks in soccer) and penalty cards. After a violation, the other team holds the ball temporarily overhead to restart play by either throwing in from the goal or side line, or taking a shot on goal (depending on the violation).
+**Moving the ball.** You may hold the ball for a maximum of five seconds. After that you have to pass, shoot, or "dribble" — throw the ball a meter or more into the water and pick it up again, which resets the count. Passing is hand-to-hand; you can also play the ball with your paddle.
 
-Substitutions can be made at any time during the game without notifying the referee; the player leaving has to cross the back line behind their team's goal before another player can come on. An illegal substitution results in a yellow card, and the offending team has to play with one fewer player for two minutes.
+**Tackling.** A player in possession can be hand-tackled: pushed over on the shoulder or back. It's the most startling rule for newcomers and the least dangerous in practice. We won't push you over until you're comfortable rolling up, and plenty of experienced players ask not to be pushed during casual games.
 
-## The Pitch
+**Safety rules.** Most of the rulebook exists to keep paddles away from people. You may not put your paddle near another player's hand while they are reaching or throwing, hit a player's body with your paddle or boat, or ram another boat at speed near a right angle.
 
-Canoe polo is played either indoors in swimming pools or outdoors on a pitch which should measure 35 by 23 meters. The edges of the pitch are marked by the sides of the pool, or better, by floating ropes (similar to lane markers in swimming).
+**Space.** You can't block or obstruct an opponent unless you are going for the ball yourself or defending inside your own 6-meter goal area. Only five players per team are allowed on the pitch at once.
 
-## Referees
+**Substitutions** happen freely, without telling the referee — the player coming off just has to cross their own back line before the replacement enters. Getting that wrong is a yellow card and two minutes a player down.
 
-There are two referees (one on each side line), and they are on foot rather than in boats. The score is kept by the scorekeeper, and the timekeeper monitors the playing time and sending-off times. The goal lines are monitored by two line judges. Before play commences, scrutineers check all kit for compliance with regulations.
+**Penalties.** The usual sanction is loss of possession: the other team restarts with a throw-in from the side or goal line, or a shot on goal, depending on the offense. Serious or repeated fouls bring penalty shots and cards.
 
-## Goals
+The full rules are worth a read if you want the detail — see the [ICF Canoe Polo rules](https://www.canoeicf.com/rules#polo) and our [Links](/links/) page for rules and coaching resources.
 
-The goals (measuring 1 by 1.5 meters) are a frame with a net, suspended 2 meters above the water. A player, acting as goalie, defends the goal with their paddle by holding it up vertically. Special rules concern the goalie, such as the attacking team not being able to interfere with or jostle them. The paddles used by goalies are often longer than those used by other players.
+## The pitch, the goals, the clock
 
-## Timing
+Canoe polo is played indoors in swimming pools or outdoors on open water. A full-size pitch is 35 by 23 meters, bounded by the pool walls or — better — by floating lane ropes.
 
-The game is officially played as a 20-minute match consisting of two 10-minute halves. The teams swap ends at half-time. Each half begins with a sprint: each team lines up against its goal line and the ball is thrown into the middle of the pitch by the referee. One player from each team sprints to win possession of the ball.
+The goals measure 1 by 1.5 meters: a netted frame hanging two meters above the water. There is no dedicated goalkeeper position, but whoever is defending the goal does so by holding their paddle up vertically to block shots, which is why goalkeeping paddles are often longer. The attacking team is not allowed to interfere with them while they do it.
 
-{{< spacer 10 >}}
+A match is 20 minutes — two 10-minute halves, swapping ends at the break. Each half starts with a sprint: both teams line up on their own goal line, the referee throws the ball into the center of the pitch, and one player from each side races for it.
 
-For more information, refer to the Canoe Polo section on the [International Canoe Federation website](https://www.canoeicf.com/disciplines/canoe-polo), read *Boat, Paddle and Ball*, a short history of canoe polo by Ian Beasley, and see our [Links](/links/) page for rules and coaching resources.
+Matches are run by two referees, one on each side line, on foot rather than in boats, supported by a scorekeeper, a timekeeper, and two line judges.

@@ -10,11 +10,11 @@ NYKP members compete in kayak polo tournaments across North America and beyond. 
 
 ## Upcoming events and tournaments
 
-- **Aug 8–9, 2026** — [North American Kayak Polo Championship](https://aca-atlanticdivision.com/2026-north-american-kayak-polo-champs/), Lake Sebago, NY
 - **Sep 15–20, 2026** — [ICF Canoe Polo World Championships](https://www.canoeicf.com/canoe-polo-world-championships/duisburg-2026), Duisburg, Germany
 
 ## Previous events and tournaments
 
+- **Aug 8–9, 2026** — [North American Kayak Polo Championship](https://aca-atlanticdivision.com/2026-north-american-kayak-polo-champs/), Lake Sebago, NY
 - **Mar 14-15, 2026** — NYKP Spring Tournament, Jersey City, NJ
 - **Jan 31-Feb 1, 2026** — NYKP Winter Tournament, Jersey City, NJ
 - **Aug 22-24, 2025** — Pan-American Championship, Edmonton, Alberta
