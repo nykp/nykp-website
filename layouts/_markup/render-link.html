@@ -1,0 +1,16 @@
+{{- /* Renders Markdown links. External links (a different host from our own)
+       open in a new tab with rel="noopener"; internal links, anchors, and
+       mailto:/tel: links are rendered normally.
+
+       Mirrors the behavior of layouts/shortcodes/button.html, which does the
+       same for button-styled links. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $external := false -}}
+{{- if and $u.Host (in (slice "http" "https") $u.Scheme) -}}
+  {{- $ownHosts := slice (urls.Parse site.BaseURL).Host "nykayakpolo.org" "www.nykayakpolo.org" -}}
+  {{- $external = not (in $ownHosts $u.Host) -}}
+{{- end -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $external }} target="_blank" rel="noopener"{{ end -}}
+>{{ .Text }}</a>

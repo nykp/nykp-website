@@ -34,6 +34,8 @@ During the winter we play in an indoor heated pool in the Yanitelli Recreation C
 
 The pool is in a large brown building on Montgomery, almost opposite Fairmount Terrace. Walk into the driveway; the pool is in the building with the sloping wall on your left. At the end of the driveway there are steps down to the left to access the building — you'll see the pool inside on the left.
 
+**Getting there:** [Find the Yanitelli Center on Google Maps](https://maps.app.goo.gl/CY9ozTQ5y4fQEuuF9) for directions by transit, car, bike, or on foot.
+
 **By PATH:** Take the PATH train to Journal Square Station. Follow JFK Boulevard to Montgomery Avenue. The walk takes about 15 minutes from the Journal Square PATH station to the pool.
 
 **Parking:** Available in the University lot on Montgomery Street.

@@ -20,7 +20,7 @@ A curated collection of kayak polo and paddling resources — rules and coaching
 ## US clubs
 
 - [Sebago Kayak Polo](https://www.meetup.com/lake-sebago-kayak-polo/) — Rockland County, NY
-- [New England Canoe Polo](https://bostonkayakpolo.com/) — Boston, MA
+- [New England Canoe Polo](https://www.instagram.com/newenglandcanoepolo/) — Boston, MA
 - [Austin Aquabats](https://austinaquabats.com/) — Austin, TX
 - [Bay Area Kayak Polo](https://www.bayareakayakpolo.com/) — San Francisco, CA
 - [Washington Kayak Club](https://wakayakclub.clubexpress.com/) — Seattle, WA
@@ -31,24 +31,24 @@ A curated collection of kayak polo and paddling resources — rules and coaching
 
 ## New York City area paddling organizations
 
-- [**Brooklyn Bridge Park Boathouse**](http://www.bbpboathouse.org/) — free public paddling; training and trips for volunteers
-- [**North Brooklyn Community Boathouse**](https://nbcboathouse.org/) — kayaking, canoeing, and environmental education
-- [**Kayak & Canoe Club of NY/NJ**](https://kccny.org/) — whitewater paddling; winter rolling sessions & instruction
-- [**LIC Community Boathouse**](https://www.licboathouse.org/) — free public paddling; training and trips for volunteers
-- [**Gowanus Dredgers Canoe Club**](https://gowanusdredgers.org/) — canoeing, free public paddling
-- [**Downtown Boathouse**](https://www.downtownboathouse.org/) — free public paddling; training and trips for volunteers
-- [**Manhattan Community Boathouse**](https://www.manhattancommunityboathouse.org/) — free public paddling; training and trips for volunteers
-- [**Sebago Canoe Club**](https://sebagocanoeclub.org/) — kayaking and canoeing
-- [**Inwood Canoe Club**](https://www.inwoodcanoenyc.org/) — kayaking and canoeing
-- [**Yonkers Paddling & Rowing Club**](https://www.yprc.org/) — kayaking, instruction, organizes a large annual circumnavigation
-- [**Hoboken Cove Boathouse**](https://sites.google.com/hobokencoveboathouse.org/hccb/home) — free public paddling; training and trips for volunteers
-- [**The Kayak Foundation**](https://kayakfoundation.org/) — training and guided trips
-- [**Manhattan Kayak Company**](https://manhattankayak.com/) — instruction, training, guided trips, boat storage
-- [**New York Outrigger**](https://newyorkoutrigger.org/) — outrigger canoeing & SUP
+- [Brooklyn Bridge Park Boathouse](http://www.bbpboathouse.org/) — free public paddling; training and trips for volunteers
+- [North Brooklyn Community Boathouse](https://nbcboathouse.org/) — kayaking, canoeing, and environmental education
+- [Kayak & Canoe Club of NY/NJ](https://kccny.org/) — whitewater paddling; winter rolling sessions & instruction
+- [LIC Community Boathouse](https://www.licboathouse.org/) — free public paddling; training and trips for volunteers
+- [Gowanus Dredgers Canoe Club](https://gowanusdredgers.org/) — canoeing, free public paddling
+- [Downtown Boathouse](https://www.downtownboathouse.org/) — free public paddling; training and trips for volunteers
+- [Manhattan Community Boathouse](https://www.manhattancommunityboathouse.org/) — free public paddling; training and trips for volunteers
+- [Sebago Canoe Club](https://sebagocanoeclub.org/) — kayaking and canoeing
+- [Inwood Canoe Club](https://www.inwoodcanoenyc.org/) — kayaking and canoeing
+- [Yonkers Paddling & Rowing Club](https://www.yprc.org/) — kayaking, instruction, organizes a large annual circumnavigation
+- [Hoboken Cove Boathouse](https://sites.google.com/hobokencoveboathouse.org/hccb/home) — free public paddling; training and trips for volunteers
+- [The Kayak Foundation](https://kayakfoundation.org/) — training and guided trips
+- [Manhattan Kayak Company](https://manhattankayak.com/) — instruction, training, guided trips, boat storage
+- [New York Outrigger](https://newyorkoutrigger.org/) — outrigger canoeing & SUP
 
 ## New York waterway information & resources
 
-- *Waterways of Hope* — a documentary film series chronicling the work of local environmental and paddling groups and volunteers in NYC
+- [*Waterways of Hope*](https://nbcboathouse.org/videos/v/waterways-of-hope-newtown-creek) — a documentary film series chronicling the work of local environmental and paddling groups and volunteers in NYC
 - [New York City Water Trail Association](https://nycwatertrail.org/)
 - [NYC Parks kayak & canoe launch sites](https://www.nycgovparks.org/facilities/kayak)
 - [Hudson River Park boating](https://hudsonriverpark.org/activities/boating/)
