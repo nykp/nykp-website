@@ -8,7 +8,7 @@ images: ["/img/action-2.jpg"]
 Kayak polo — canoe polo, officially — is a team ball sport played in kayaks. A combination of water polo, basketball, and bumper boats, players pass and shoot a water polo ball while maneuvering to set up screens and drives.
 {{< /intro >}}
 
-Canoe polo can be played on any calm body of water, often either on a lake in the summer or a pool in the winter. A full-size pitch is 35 by 23 meters, with goals on each end suspended two meters above the water. Two teams of five try to score on each other, with the attacking team trying to move the ball down the pitch and get it into the net. The defending team's goalie sits under the goal and tried to block shots with their paddle, while the other four attempt to hold their defensive formation and prevent drives that can result in a goal.
+Canoe polo can be played on any calm body of water, often either on a lake in the summer or a pool in the winter. A full-size pitch is 35 by 23 meters, with goals on each end suspended two meters above the water. Two teams of five try to score on each other, with the attacking team trying to move the ball down the pitch and get it into the net. The defending team's goalie sits under the goal and tries to block shots with their paddle, while the other four attempt to hold their defensive formation and prevent drives that can result in a goal.
 
 What makes this ball sport so unique is the boat. Every decision is also a boat decision — where you are pointing, how fast you are moving, whether you can turn before the player you are marking does. Contact is part of the game, and so is the occasional capsize; rolling back upright is a crucial skill. While the learning curve can be a challenge to new paddlers, it is hard to come up with a more fun way to develop advanced kayaking skills than playing kayak polo.
 
@@ -32,7 +32,7 @@ The full rules are worth a read if you want the detail — see the [ICF Canoe Po
 
 ## The pitch, the goals, the clock
 
-The goals measure 1 by 1.5 meters: a netted frame hanging two meters above the water. There is no dedicated goalkeeper position, but whoever is defending the goal does so by holding their paddle up vertically to block shots, which is why goalkeeping paddles are often longer. The attacking team is not allowed to interfere with them while they do it.
+The goals measure 1 by 1.5 meters: a netted frame hanging two meters above the water. Goalie is not a fixed position — any player can take it, and teams often rotate through it during play — but whoever is under the goal defends it by holding their paddle up vertically, which is why goalkeeping paddles are often longer.
 
 A match is 20 minutes — two 10-minute halves, swapping ends at the break. Each half starts with a sprint: both teams line up on their own goal line, the referee throws the ball into the center of the pitch, and one player from each side races for it.
 
