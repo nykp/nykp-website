@@ -1,3 +1,16 @@
+{{- /* ---------------------------------------------------------------------------
+     THEME OVERRIDE — copy of themes/dot-org-hugo-theme/layouts/partials/footer/social-links.html
+
+     Hugo replaces a theme file wholesale when a file of the same path exists
+     here, so overriding one line means owning the whole file. The ONLY change
+     from the theme's version is marked "NYKP:" below.
+
+     If you ever update the theme submodule, re-diff this file against the
+     theme's and re-apply the change:
+
+         diff themes/dot-org-hugo-theme/layouts/partials/footer/social-links.html \
+              layouts/partials/footer/social-links.html
+--------------------------------------------------------------------------- */ -}}
 {{ $siteTitle := .Site.Title }}
 {{ $socialLinks := .Site.Params.social_links }}
 {{ with $socialLinks }}
@@ -12,6 +25,7 @@
     <ul class="social-links">
         {{ range $validLinks }}
         <li>
+            {{/* NYKP: social links are external, so open them in a new tab. */}}
             <a href="{{ .value }}" target="_blank" rel="noopener" title="{{ i18n "social_link_title" (dict "SiteTitle" $siteTitle "Network" (humanize .key)) | default (printf "%s on %s" $siteTitle (humanize .key)) }}">
                 <img loading="lazy" width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ (humanize .key) | safeHTMLAttr }} icon">
             </a>

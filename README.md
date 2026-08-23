@@ -67,6 +67,33 @@ The contact form was intentionally replaced with a **`mailto:` link** to
 `info@nykayakpolo.org` — a static site has no server to process form submissions, and a
 mailto link needs no third-party service.
 
+## Theme customizations
+
+The theme lives in `themes/dot-org-hugo-theme` as a pinned git submodule — it never
+changes unless you explicitly update it. Anything in `layouts/` **overrides** the
+theme's file of the same path. Hugo has no way to patch part of a template, so an
+override always replaces the whole file.
+
+| File | What it changes |
+|---|---|
+| `layouts/_markup/render-link.html` | Makes external links in page content open in a new tab. Applies to every Markdown link automatically — no per-link markup needed. |
+| `layouts/shortcodes/button.html` | Same, for `{{</* button */>}}` links. |
+| `layouts/partials/header.html` | Opens the header's Meetup CTA in a new tab. |
+| `layouts/partials/footer/social-links.html` | Opens the footer social icons in a new tab. |
+| `layouts/index.html`, `layouts/shortcodes/email.html` | Home page layout and the email shortcode. |
+
+The two `partials/` files are full copies of the theme's versions with a single line
+changed (marked `NYKP:` in each). **If you update the theme submodule, re-diff them:**
+
+```bash
+diff themes/dot-org-hugo-theme/layouts/partials/header.html layouts/partials/header.html
+diff themes/dot-org-hugo-theme/layouts/partials/footer/social-links.html \
+     layouts/partials/footer/social-links.html
+```
+
+If the only difference is the `NYKP:` line, nothing to do. If the theme's version has
+changed too, re-copy it and re-apply that one line.
+
 ## Deployment (GitHub Pages)
 
 Every push to `main` triggers `.github/workflows/hugo.yml`, which builds the site and

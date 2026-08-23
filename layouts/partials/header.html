@@ -1,3 +1,16 @@
+{{- /* ---------------------------------------------------------------------------
+     THEME OVERRIDE — copy of themes/dot-org-hugo-theme/layouts/partials/header.html
+
+     Hugo replaces a theme file wholesale when a file of the same path exists
+     here, so overriding one line means owning the whole file. The ONLY change
+     from the theme's version is marked "NYKP:" below.
+
+     If you ever update the theme submodule, re-diff this file against the
+     theme's and re-apply the change:
+
+         diff themes/dot-org-hugo-theme/layouts/partials/header.html \
+              layouts/partials/header.html
+--------------------------------------------------------------------------- */ -}}
 {{ $extra_header_class := "" }}
 {{ with .Site.Params.sticky_header }}
   {{ $extra_header_class = "sticky" }}
@@ -48,6 +61,7 @@
             <div class="main-menu__cta-language-wrapper">
                 {{ with $.Site.Params.main_cta }}
                 {{ if and .text .link }}
+                {{- /* NYKP: open the CTA in a new tab when it points off-site. */ -}}
                 {{- $ext := or (hasPrefix .link "http://") (hasPrefix .link "https://") -}}
                 <a href="{{ .link | absLangURL }}" class="button main-menu-cta"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>
                 {{ end }}
