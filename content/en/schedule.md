@@ -14,9 +14,9 @@ Our schedule lives on Meetup. Sessions vary week to week with the season, the ti
 
 Every session is posted as its own Meetup event, and each one tells you what it is:
 
-1. **Read the event description.** It says what kind of session it is, who it is aimed at, and anything specific to that day — conditions, gear, meeting point, or level restrictions.
-2. **RSVP if you plan to come.** We need to know who is coming so we can bring enough boats and gear, and so we know who to look out for.
-3. **Message the session host with questions.** Every event lists its host(s). If you are unsure whether a session is right for you, ask them first — they would much rather answer a question than turn someone away at the dock.
+1. **Read the event description.** It says what kind of session it is, who it is aimed at, and anything specific to that day — conditions, gear, session details, or level restrictions.
+2. **RSVP if you plan to come.** We need to know who is coming so we can plan appropriately, know who to look out for, and ensure we have enough boats and gear.
+3. **Message the session host with questions.** Every event lists its host(s). If you are unsure whether a session is right for you, ask them first — they would much rather answer a question than turn someone away at the dock or pool.
 
 ## Types of sessions
 
@@ -28,7 +28,7 @@ A first look at the sport for people who have never played. Expect a lot of time
 
 ### Beginner-friendly / Social
 
-Relaxed games with time set aside for skills. Good for newer players and for anyone who wants a lower-intensity session. We work on paddling, passing, shooting, rescues, and rolling, and play games at a friendly pace.
+Relaxed games with time set aside for skills. Good for newer players and for anyone who wants a lower-intensity session. We work on paddling, passing, shooting, basic tactics, and play games at a friendly pace.
 {{< /column >}}
 {{< column >}}
 ### Intermediate scrimmages
@@ -51,7 +51,7 @@ The currents at our summer location on the Hudson can be strong, and they change
 
 ## I've never kayaked before — which session should I join?
 
-Kayak polo has a steep learning curve, and most of our sessions assume you are already reasonably comfortable in a decked boat. Look for an Introductory session, and message the host to confirm before you sign up.
+Kayak polo has a steep learning curve, and most of our sessions assume you are already reasonably comfortable in a decked boat (i.e., a small boat with a sprayskirt around the cockpit). Look for an Introductory session, and message the host to confirm before you sign up.
 
 We also highly recommend the [KCCNY pool sessions](https://kccny.org/pool-sessions/) to learn to roll your kayak and practice other advanced kayaking skills.
 
