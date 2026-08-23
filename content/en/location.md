@@ -17,10 +17,10 @@ We play at two locations through the year: outdoors on the Hudson River in the s
 Pier 66 Boathouse, W 26th St & West Side Highway — the summer home of New York Kayak Polo, just 3 blocks north of Chelsea Piers.
 
 Water conditions:
-- Approximate tide and current predictions: https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12
-- Waterbody Advisories: https://nycwaterbodyadvisory.azurewebsites.net/
+- [Approximate tide and current predictions](https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12)
+- [Waterbody advisories](https://nycwaterbodyadvisory.azurewebsites.net/)
 
-**By subway/bus:** Take the M23 crosstown bus, which runs across 23rd Street and stops right in front of Chelsea Piers. The M23 connects with all major subway lines that stop at 23rd Street: the C & E on 8th Ave, the 1 on 7th Ave, the F and PATH trains on 6th Ave, the N & R on Broadway, and the 6 on Lexington.
+**Getting there:** [Find Pier 66 Boathouse on Google Maps](https://maps.app.goo.gl/mg9ewUiWyXXF3Uvr9) for directions by transit, car, bike, or on foot.
 
 **Parking:** Some street parking may be available on or adjacent to 26th St. More (paid) parking is available at Chelsea Piers, three blocks south of our home at 26th Street. Once you have parked, follow the pedestrian walkway north along the waterfront to Pier 66.
 {{< /column >}}
@@ -33,6 +33,8 @@ Water conditions:
 During the winter we play in an indoor heated pool in the Yanitelli Recreation Center at Saint Peter's University, near the intersection of Montgomery St. and Fairmount Terrace in Jersey City, NJ.
 
 The pool is in a large brown building on Montgomery, almost opposite Fairmount Terrace. Walk into the driveway; the pool is in the building with the sloping wall on your left. At the end of the driveway there are steps down to the left to access the building — you'll see the pool inside on the left.
+
+**Getting there:** [Find the Yanitelli Center on Google Maps](https://maps.app.goo.gl/CY9ozTQ5y4fQEuuF9) for directions by transit, car, bike, or on foot.
 
 **By PATH:** Take the PATH train to Journal Square Station. Follow JFK Boulevard to Montgomery Avenue. The walk takes about 15 minutes from the Journal Square PATH station to the pool.
 
