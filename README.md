@@ -16,6 +16,7 @@ installed globally. After cloning, run everything through `pixi run …`.
 | `pixi run dev`   | Start a local preview at <http://localhost:1313> with live reload |
 | `pixi run build` | Build the production site into `./public` |
 | `pixi run index` | Rebuild the Pagefind search index (CI does this automatically) |
+| `pixi run conditions` | Fetch Hudson conditions for the `/conditions/` page (CI does this automatically) |
 
 > **Why pixi *and* npm?** pixi manages the *environment* — it pins the exact `hugo` and
 > `node` versions in `pixi.lock` (for both macOS and Linux/CI). The theme's build
@@ -47,6 +48,7 @@ All page text is in **`content/en/`** as Markdown — edit these, no coding requ
 | `schedule.md`   | Schedule |
 | `membership.md` | Membership |
 | `location.md`   | Location |
+| `conditions.md` | Hudson Conditions (intro text; the data is generated — see below) |
 | `events.md`     | Events and tournaments |
 | `links.md`      | Links |
 | `contact.md`    | Contact |
@@ -66,6 +68,59 @@ All page text is in **`content/en/`** as Markdown — edit these, no coding requ
 The contact form was intentionally replaced with a **`mailto:` link** to
 `info@nykayakpolo.org` — a static site has no server to process form submissions, and a
 mailto link needs no third-party service.
+
+## Hudson conditions page
+
+`/conditions/` shows tidal currents, water temperature, the forecast, recent
+rainfall, and waterbody advisories for our stretch of the Hudson — the same
+summary that goes to Slack each morning. The data comes from the
+[nykp/noaa-currents](https://github.com/nykp/noaa-currents) package.
+
+**Nothing generated is committed.** The deploy workflow installs that package,
+runs its export into `data/conditions.json` and `static/img/conditions/`, then
+builds. Both paths are gitignored — committing the plots would add hundreds of
+KB to git history every day, and a rebuilt page is as fresh as its build.
+
+To populate the page locally:
+
+```bash
+pip install git+https://github.com/nykp/noaa-currents
+pixi run conditions     # writes data/conditions.json + static/img/conditions/
+pixi run dev
+```
+
+Without that step the page renders a short note saying so, so `pixi run dev`
+still works for everything else.
+
+### Freshness
+
+The page is a **morning snapshot**, rebuilt once a day, and says so. A second
+[cron-job.org](https://cron-job.org) job triggers it the same way the Slack
+post is triggered — a POST to this repo's workflow dispatch API:
+
+```
+POST https://api.github.com/repos/nykp/nykp-website/actions/workflows/hugo.yml/dispatches
+{"ref": "main"}
+```
+
+Every section links to its live source, which is what to follow for anything
+that changes during the day — advisories especially.
+
+### When a source is down
+
+Two failure paths, neither of which should cost a deploy:
+
+- **A section's source is unreachable.** The export marks it
+  `"status": "unavailable"` and exits 0; the page renders that section as
+  unavailable with a link to the live source, and everything else normally.
+- **The export itself fails** (a broken install, an import error). The workflow
+  step is `continue-on-error`, so the build proceeds and the page falls back to
+  its "not generated for this build" note.
+
+The one thing deliberately *not* tolerated is publishing a wrong number: the
+DEP dashboard serves partial lists while warming up, so the package refetches
+until the list is complete and fails the section rather than reporting a
+citywide advisory count off a short list.
 
 ## Theme customizations
 
