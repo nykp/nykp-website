@@ -113,3 +113,102 @@
 .img-button--lg img {
   height: 76px;
 }
+
+/* ==========================================================================
+   Hudson conditions page
+   Rendered by layouts/shortcodes/conditions.html from data/conditions.json.
+   Everything is scoped under .conditions so none of it leaks to other pages.
+   ========================================================================== */
+
+.conditions__stamp {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  border-left: 3px solid var(--nykp-yellow);
+  padding-left: 12px;
+}
+
+.conditions__section {
+  margin-top: 40px;
+}
+
+/* Advisories are the one thing here that should stop someone getting on the
+   water, so they read as a warning rather than as more body text. */
+.conditions__alert {
+  border-left: 5px solid #c0392b;
+  background: rgba(192, 57, 43, 0.07);
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin: 24px 0;
+}
+.conditions__alert p:first-child {
+  margin-top: 0;
+}
+.conditions__alert p:last-child {
+  margin-bottom: 0;
+}
+
+/* Notify NYC items are informational, not a warning about right now. */
+.conditions__alert--muted {
+  border-left-color: var(--primary-400);
+  background: rgba(47, 124, 196, 0.07);
+}
+
+/* The headline number for a section — water temp range, rainfall total. */
+.conditions__big {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.conditions__source {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.conditions__note {
+  font-size: 0.92rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.conditions__unavailable {
+  border-left: 3px solid #999;
+  padding-left: 12px;
+  opacity: 0.9;
+}
+
+.conditions--missing {
+  border: 1px dashed #999;
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+
+/* The currents table is the densest thing on the page. Keep it readable on a
+   phone by letting it scroll inside its own box rather than pushing the page
+   sideways. */
+.conditions__tablewrap {
+  overflow-x: auto;
+}
+.conditions__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.conditions__table th,
+.conditions__table td {
+  text-align: left;
+  padding: 7px 14px 7px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+.conditions__table th {
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+.conditions img {
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+}

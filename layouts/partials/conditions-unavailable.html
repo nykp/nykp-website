@@ -1,0 +1,9 @@
+{{- /* One conditions section whose upstream source was down when the site was
+       built. Says so plainly and sends the reader to the live source, rather
+       than showing a blank space or a stale number.
+
+       Called with (dict "what" "Current predictions" "url" "https://…" "name" "NOAA"). */ -}}
+<p class="conditions__unavailable">
+  {{ .what }} couldn't be fetched when this page was built. Check
+  <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a> directly.
+</p>

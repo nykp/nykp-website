@@ -41,6 +41,30 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      # The Hudson conditions page is generated at build time rather than
+      # committed: the plots would add hundreds of KB to git history every day,
+      # and a rebuilt page is always as fresh as its build.
+      - name: Set up Python for the conditions export
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      # continue-on-error, deliberately. A NOAA outage must not block an
+      # unrelated content change from deploying. web_export already exits 0
+      # with sections marked unavailable; this covers the harder failures
+      # (a broken install, an import error), where the page falls back to
+      # "conditions haven't been generated for this build".
+      - name: Fetch Hudson conditions
+        continue-on-error: true
+        env:
+          MPLBACKEND: Agg
+        run: |
+          pip install --quiet git+https://github.com/nykp/noaa-currents
+          nykp-conditions web-export \
+            --out data/conditions.json \
+            --img-dir static/img/conditions \
+            --img-url /img/conditions
+
       # `pixi run build` also runs the `setup` task (npm install) first.
       # Trailing args are appended to the task's hugo command; --baseURL wins.
       - name: Build site
