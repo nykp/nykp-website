@@ -40,30 +40,29 @@ en:
       weight: 3
       parent: "play"
     - identifier: "conditions"
-      name: "Hudson Conditions"
+      name: "Conditions"
       url: "/conditions/"
-      weight: 4
-      parent: "play"
+      weight: 2
     - identifier: "about"
       name: "About Us"
       url: "/about/"
-      weight: 2
+      weight: 3
     - identifier: "game"
       name: "The Game"
       url: "/game/"
-      weight: 3
+      weight: 4
     - identifier: "events"
       name: "Events"
       url: "/events/"
-      weight: 4
+      weight: 5
     - identifier: "links"
       name: "Links"
       url: "/links/"
-      weight: 5
+      weight: 6
     - identifier: "contact"
       name: "Contact"
       url: "/contact/"
-      weight: 6
+      weight: 7
     footer:
     - identifier: "about"
       name: "About"
@@ -85,14 +84,18 @@ en:
       name: "Location"
       url: "/location/"
       weight: 5
+    - identifier: "conditions"
+      name: "Hudson Conditions"
+      url: "/conditions/"
+      weight: 6
     - identifier: "events"
       name: "Events"
       url: "/events/"
-      weight: 6
+      weight: 7
     - identifier: "links"
       name: "Links"
       url: "/links/"
-      weight: 7
+      weight: 8
     - identifier: "contact"
       name: "Contact"
       url: "/contact/"
