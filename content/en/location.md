@@ -17,8 +17,9 @@ We play at two locations through the year: outdoors on the Hudson River in the s
 Pier 66 Boathouse, W 26th St & West Side Highway — the summer home of New York Kayak Polo, just 3 blocks north of Chelsea Piers.
 
 Water conditions:
-- [Approximate tide and current predictions](https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12)
-- [Waterbody advisories](https://nycwaterbodyadvisory.azurewebsites.net/)
+- [**Today's Hudson conditions**](/conditions/) — currents, water temperature, forecast, and advisories, refreshed each morning
+- [Tide and current predictions](https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12) (NOAA)
+- [Waterbody advisories](https://nycwaterbodyadvisory.azurewebsites.net/) (NYC DEP)
 
 **Getting there:** [Find Pier 66 Boathouse on Google Maps](https://maps.app.goo.gl/mg9ewUiWyXXF3Uvr9) for directions by transit, car, bike, or on foot.
 

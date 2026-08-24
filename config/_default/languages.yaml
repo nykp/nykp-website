@@ -85,14 +85,18 @@ en:
       name: "Location"
       url: "/location/"
       weight: 5
+    - identifier: "conditions"
+      name: "Hudson Conditions"
+      url: "/conditions/"
+      weight: 6
     - identifier: "events"
       name: "Events"
       url: "/events/"
-      weight: 6
+      weight: 7
     - identifier: "links"
       name: "Links"
       url: "/links/"
-      weight: 7
+      weight: 8
     - identifier: "contact"
       name: "Contact"
       url: "/contact/"

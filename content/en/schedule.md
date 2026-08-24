@@ -47,6 +47,8 @@ Focused training for experienced players working toward competitive play: struct
 **Beginners: always check with the session host before signing up for a summer session, and respect any session labeled "Advanced/Expert Only."**
 
 The currents at our summer location on the Hudson can be strong, and they change through the day with the tide. A paddler who cannot reliably stay with their boat, get back into it, or paddle against moving water is at real risk here — and so is anyone who has to leave the game to rescue them. This is not a formality. If the host says a given session is not right for you, please believe them and come to one that is.
+
+See [today's Hudson conditions](/conditions/) for the day's current predictions, and for whether the river is under a water quality advisory.
 {{< /card >}}
 
 ## I've never kayaked before — which session should I join?
