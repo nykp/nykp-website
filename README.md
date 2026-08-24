@@ -89,6 +89,11 @@ pixi run conditions     # writes data/conditions.json + static/img/conditions/
 pixi run dev
 ```
 
+Installing that package puts a `nykp-conditions` command on the PATH, which is
+what `pixi run conditions` calls — so it has to be installed somewhere on your
+PATH (a virtualenv you have active, or a `pipx install`). Its own README
+documents the other subcommands.
+
 Without that step the page renders a short note saying so, so `pixi run dev`
 still works for everything else.
 

@@ -18,7 +18,7 @@ index = "npx -y pagefind --site public"
 # The deploy workflow runs this before `build`; run it locally before `dev` if
 # you want the page populated. Needs the nykp_conditions package:
 #   pip install git+https://github.com/nykp/noaa-currents
-conditions = """python -m nykp_conditions.web_export \
+conditions = """nykp-conditions web-export \
     --out data/conditions.json \
     --img-dir static/img/conditions \
     --img-url /img/conditions"""

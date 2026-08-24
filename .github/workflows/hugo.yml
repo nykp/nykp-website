@@ -60,7 +60,7 @@ jobs:
           MPLBACKEND: Agg
         run: |
           pip install --quiet git+https://github.com/nykp/noaa-currents
-          python -m nykp_conditions.web_export \
+          nykp-conditions web-export \
             --out data/conditions.json \
             --img-dir static/img/conditions \
             --img-url /img/conditions
