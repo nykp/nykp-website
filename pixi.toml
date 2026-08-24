@@ -17,7 +17,7 @@ index = "npx -y pagefind --site public"
 # Fetch the Hudson conditions into data/ + static/ for the conditions page.
 # The deploy workflow runs this before `build`; run it locally before `dev` if
 # you want the page populated. Needs the nykp_conditions package:
-#   pip install git+https://github.com/nykp/noaa-currents
+#   pip install git+https://github.com/nykp/nykp-conditions
 conditions = """nykp-conditions web-export \
     --out data/conditions.json \
     --img-dir static/img/conditions \
