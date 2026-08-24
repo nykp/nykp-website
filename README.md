@@ -74,7 +74,7 @@ mailto link needs no third-party service.
 `/conditions/` shows tidal currents, water temperature, the forecast, recent
 rainfall, and waterbody advisories for our stretch of the Hudson — the same
 summary that goes to Slack each morning. The data comes from the
-[nykp/noaa-currents](https://github.com/nykp/noaa-currents) package.
+[nykp/nykp-conditions](https://github.com/nykp/nykp-conditions) package.
 
 **Nothing generated is committed.** The deploy workflow installs that package,
 runs its export into `data/conditions.json` and `static/img/conditions/`, then
@@ -84,7 +84,7 @@ KB to git history every day, and a rebuilt page is as fresh as its build.
 To populate the page locally:
 
 ```bash
-pip install git+https://github.com/nykp/noaa-currents
+pip install git+https://github.com/nykp/nykp-conditions
 pixi run conditions     # writes data/conditions.json + static/img/conditions/
 pixi run dev
 ```
