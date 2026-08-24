@@ -1,0 +1,205 @@
+{{- /* Renders data/conditions.json, written at build time by
+       `nykp_conditions.web_export` from the nykp/noaa-currents package. See
+       the "Hudson conditions page" section of README.md.
+
+       Two things this has to survive, because neither is an error worth
+       failing a build over:
+
+       - The data file being absent entirely (a local `pixi run dev` without
+         `pixi run conditions` first). The page says so and stays useful.
+       - An individual section marked "unavailable" because its upstream
+         source was down when the site was built. That section says so and
+         links to the live source; the rest of the page renders normally. */ -}}
+
+{{- $c := site.Data.conditions -}}
+
+{{- if not $c -}}
+
+<div class="conditions conditions--missing">
+  <p><strong>Conditions haven't been generated for this build.</strong></p>
+  <p>They're written at deploy time. To see them locally, run
+  <code>pixi run conditions</code> and then <code>pixi run dev</code>.</p>
+</div>
+
+{{- else -}}
+
+{{- $sections := $c.sections -}}
+{{- $dep := index $sections "dep_advisory" -}}
+
+<div class="conditions">
+
+  <p class="conditions__stamp">
+    Updated {{ $c.generated_at_display }}. This page is a snapshot taken each
+    morning — conditions change through the day, so follow the source links for
+    anything live.
+  </p>
+
+  {{/* Safety first: an active advisory is the one thing on this page that
+       should stop someone getting on the water, so it leads. */}}
+  {{- if and $dep (eq $dep.status "ok") $dep.active }}
+  <div class="conditions__alert">
+    <p><strong>The Hudson is under a water quality advisory</strong>
+    {{ with $dep.until_display }}until about {{ . }}{{ end }}.</p>
+    <p>DEP issues these after heavy rain, when combined sewer overflow can
+    discharge into the river. Avoid contact with the water — that includes
+    rolling and rescue practice — until it lifts.
+    <a href="{{ $dep.source_url }}" target="_blank" rel="noopener">Check the DEP dashboard</a>
+    for the current status.</p>
+  </div>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := index $sections "currents" }}
+  <section class="conditions__section">
+    <h2>Tidal currents</h2>
+    {{- if eq $s.status "ok" }}
+    <p class="conditions__source">
+      Predictions for {{ $s.station.name }}{{ with $s.station.depth }}, {{ . }} depth{{ end }} —
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">NOAA Tides &amp; Currents</a>
+    </p>
+    {{- range $s.days }}
+    <h3>{{ .date_display }}</h3>
+    <div class="conditions__tablewrap">
+      <table class="conditions__table">
+        <thead><tr><th scope="col">Time</th><th scope="col">Stage</th><th scope="col">Speed</th></tr></thead>
+        <tbody>
+          {{- range .entries }}
+          <tr>
+            <td>{{ .time }}</td>
+            <td>{{ .stage }}</td>
+            <td>{{ with .speed_mph }}{{ printf "%.1f" . }} mph{{ else }}—{{ end }}</td>
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    {{- end }}
+    <p class="conditions__note">Flood runs upriver (north), ebb runs downriver
+    (south). Speeds are the peak for that stage; slack water is the turn
+    between them.</p>
+    {{- else }}
+    {{- partial "conditions-unavailable.html" (dict "what" "Current predictions" "url" "https://tidesandcurrents.noaa.gov/noaacurrents/predictions?id=NYH1928_12" "name" "NOAA Tides & Currents") }}
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := index $sections "water_temp" }}
+  <section class="conditions__section">
+    <h2>Water temperature</h2>
+    {{- if eq $s.status "ok" }}
+    <p class="conditions__big">{{ printf "%.1f" $s.low_f }}°F – {{ printf "%.1f" $s.high_f }}°F</p>
+    <p>Over the last {{ $s.hours }} hours at {{ $s.station.name }}: low of
+    {{ printf "%.1f" $s.low_f }}°F at {{ $s.low_at_display }}, high of
+    {{ printf "%.1f" $s.high_f }}°F at {{ $s.high_at_display }}.</p>
+    {{- with $s.image }}<img src="{{ . }}" alt="Water temperature over the last 36 hours" loading="lazy">{{ end }}
+    <p class="conditions__source">
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">NOAA observations at {{ $s.station.name }}</a>
+    </p>
+    {{- else }}
+    {{- partial "conditions-unavailable.html" (dict "what" "Water temperature" "url" "https://tidesandcurrents.noaa.gov/stationhome.html?id=8518750#obs" "name" "NOAA") }}
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := index $sections "forecast" }}
+  <section class="conditions__section">
+    <h2>Forecast</h2>
+    {{- if eq $s.status "ok" }}
+    {{- range $s.periods }}
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with $s.image }}<img src="{{ . }}" alt="National Weather Service meteogram for the next several days" loading="lazy">{{ end }}
+    <p class="conditions__source">
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">National Weather Service</a>
+    </p>
+    {{- else }}
+    {{- partial "conditions-unavailable.html" (dict "what" "The forecast" "url" "https://forecast.weather.gov/MapClick.php?lat=40.7143&lon=-74.006" "name" "the National Weather Service") }}
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := index $sections "precip" }}
+  <section class="conditions__section">
+    <h2>Recent rainfall</h2>
+    {{- if eq $s.status "ok" }}
+    {{- if gt $s.total_inches 0.0 }}
+    <p class="conditions__big">{{ printf "%.2f" $s.total_inches }} in</p>
+    <p>Measured at {{ $s.station.name }} over the last {{ $s.hours }} hours
+    ({{ $s.window_display }}){{ with $s.wettest_hour_display }}, wettest hour
+    {{ . }} at {{ printf "%.2f" $s.wettest_hour_inches }} in{{ end }}.</p>
+    {{- else }}
+    <p class="conditions__big">None</p>
+    <p>No measurable rain at {{ $s.station.name }} in the last {{ $s.hours }} hours.</p>
+    {{- end }}
+    {{- with $s.image }}<img src="{{ . }}" alt="Hourly precipitation over the last 24 hours" loading="lazy">{{ end }}
+    <p class="conditions__note">Rainfall matters here because it drives the
+    sewer overflows behind water quality advisories.</p>
+    <p class="conditions__source">
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">Observations at {{ $s.station.name }}</a>
+    </p>
+    {{- else }}
+    {{- partial "conditions-unavailable.html" (dict "what" "Rainfall" "url" "https://www.weather.gov/wrh/timeseries?site=KNYC" "name" "the National Weather Service") }}
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := $dep }}
+  <section class="conditions__section">
+    <h2>Water quality advisory</h2>
+    {{- if eq $s.status "ok" }}
+    {{- if $s.active }}
+    <p><strong>{{ $s.waterbody }} is on advisory</strong>
+    {{- with $s.until_display }}, lifting about {{ . }}{{ end }}
+    {{- with $s.hours_remaining }} ({{ . }} hours from the latest reading){{ end }}.</p>
+    {{- else }}
+    <p><strong>No advisory</strong> for {{ $s.waterbody }} as of {{ $s.occurred_on_display }}.</p>
+    {{- end }}
+    <p>{{ $s.active_count }} of {{ $s.total_count }} NYC waterbodies are on advisory right now.</p>
+    {{- with $s.rainfall }}
+    <p>Rainfall at the {{ .gauge }} gauge: {{ printf "%.2f" .last_24h_inches }} in over 24 hours{{ if gt .window_hours 24 }}, {{ printf "%.2f" .window_total_inches }} in over {{ .window_hours }} hours{{ end }}. An advisory can outlast the rain that caused it.</p>
+    {{- with .image }}<img src="{{ . }}" alt="Hourly rainfall at the gauge behind the advisory" loading="lazy">{{ end }}
+    {{- end }}
+    {{- with $s.map_image }}<img src="{{ . }}" alt="Map of NYC waterbodies on advisory, with the Hudson highlighted" loading="lazy">{{ end }}
+    {{- with $s.class_description }}<p class="conditions__note">{{ $s.waterbody }} is DEC class {{ $s.water_class }}: {{ . | lower }}.</p>{{ end }}
+    <p class="conditions__source">
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">NYC DEP Waterbody Advisory dashboard</a>
+    </p>
+    {{- else }}
+    {{- partial "conditions-unavailable.html" (dict "what" "Advisory status" "url" "https://nycwaterbodyadvisory.azurewebsites.net/" "name" "the DEP dashboard") }}
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{/* ------------------------------------------------------------------ */}}
+  {{- with $s := index $sections "notify_advisories" }}
+  {{- if and (eq $s.status "ok") $s.alerts }}
+  <section class="conditions__section">
+    <h2>Notify NYC alerts</h2>
+    {{- range $s.alerts }}
+    <div class="conditions__alert conditions__alert--muted">
+      <p><strong>{{ .title }}</strong>{{ with .published_display }} — {{ . }}{{ end }}</p>
+      {{- with .summary }}<p>{{ . }}</p>{{ end }}
+    </div>
+    {{- end }}
+    <p class="conditions__source">
+      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">Notify NYC feed</a>
+    </p>
+  </section>
+  {{- end }}
+  {{- end }}
+
+  {{- with $c.unavailable }}
+  <p class="conditions__note">
+    Some sources were unreachable when this page was built
+    ({{ delimit . ", " }}). Everything else on the page is current as of
+    {{ $c.generated_at_display }}.
+  </p>
+  {{- end }}
+
+</div>
+
+{{- end -}}

@@ -14,6 +14,14 @@ dev = { cmd = "hugo server --configDir=config --buildDrafts --buildFuture --disa
 build = { cmd = "hugo --environment=production --configDir=config --gc --minify", depends-on = ["setup"] }
 # Build the Pagefind search index (run after build)
 index = "npx -y pagefind --site public"
+# Fetch the Hudson conditions into data/ + static/ for the conditions page.
+# The deploy workflow runs this before `build`; run it locally before `dev` if
+# you want the page populated. Needs the nykp_conditions package:
+#   pip install git+https://github.com/nykp/noaa-currents
+conditions = """python -m nykp_conditions.web_export \
+    --out data/conditions.json \
+    --img-dir static/img/conditions \
+    --img-url /img/conditions"""
 
 [dependencies]
 hugo = ">=0.164.0,<0.165"

@@ -39,6 +39,11 @@ en:
       url: "/location/"
       weight: 3
       parent: "play"
+    - identifier: "conditions"
+      name: "Hudson Conditions"
+      url: "/conditions/"
+      weight: 4
+      parent: "play"
     - identifier: "about"
       name: "About Us"
       url: "/about/"
