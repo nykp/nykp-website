@@ -40,29 +40,30 @@ en:
       weight: 3
       parent: "play"
     - identifier: "conditions"
-      name: "Conditions"
+      name: "Hudson Conditions"
       url: "/conditions/"
-      weight: 2
+      weight: 4
+      parent: "play"
     - identifier: "about"
       name: "About Us"
       url: "/about/"
-      weight: 3
+      weight: 2
     - identifier: "game"
       name: "The Game"
       url: "/game/"
-      weight: 4
+      weight: 3
     - identifier: "events"
       name: "Events"
       url: "/events/"
-      weight: 5
+      weight: 4
     - identifier: "links"
       name: "Links"
       url: "/links/"
-      weight: 6
+      weight: 5
     - identifier: "contact"
       name: "Contact"
       url: "/contact/"
-      weight: 7
+      weight: 6
     footer:
     - identifier: "about"
       name: "About"
