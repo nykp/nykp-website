@@ -26,6 +26,13 @@
 {{- $sections := $c.sections -}}
 {{- $dep := index $sections "dep_advisory" -}}
 
+{{- /* The plots are written to fixed filenames (dep-map.png and friends), so
+       their URLs don't change when their contents do, and a browser or CDN can
+       serve yesterday's image beside today's text. On this page that could put
+       a red Hudson next to the words "No advisory", so every image URL carries
+       the build's timestamp and a new build always means a new URL. */ -}}
+{{- $v := substr (replaceRE "[^0-9]" "" $c.generated_at) 0 14 -}}
+
 <div class="conditions">
 
   <p class="conditions__stamp">
@@ -92,7 +99,7 @@
     <p>Over the last {{ $s.hours }} hours at {{ $s.station.name }}: low of
     {{ printf "%.1f" $s.low_f }}°F at {{ $s.low_at_display }}, high of
     {{ printf "%.1f" $s.high_f }}°F at {{ $s.high_at_display }}.</p>
-    {{- with $s.image }}<img src="{{ . }}" alt="Water temperature over the last 36 hours" loading="lazy">{{ end }}
+    {{- with $s.image }}<img src="{{ . }}?v={{ $v }}" alt="Water temperature over the last 36 hours" loading="lazy">{{ end }}
     <p class="conditions__source">
       <a href="{{ $s.source_url }}" target="_blank" rel="noopener">NOAA observations at {{ $s.station.name }}</a>
     </p>
@@ -110,7 +117,7 @@
     {{- range $s.periods }}
     <p>{{ . }}</p>
     {{- end }}
-    {{- with $s.image }}<img src="{{ . }}" alt="National Weather Service meteogram for the next several days" loading="lazy">{{ end }}
+    {{- with $s.image }}<img src="{{ . }}?v={{ $v }}" alt="National Weather Service meteogram for the next several days" loading="lazy">{{ end }}
     <p class="conditions__source">
       <a href="{{ $s.source_url }}" target="_blank" rel="noopener">National Weather Service</a>
     </p>
@@ -134,7 +141,7 @@
     <p class="conditions__big">None</p>
     <p>No measurable rain at {{ $s.station.name }} in the last {{ $s.hours }} hours.</p>
     {{- end }}
-    {{- with $s.image }}<img src="{{ . }}" alt="Hourly precipitation over the last 24 hours" loading="lazy">{{ end }}
+    {{- with $s.image }}<img src="{{ . }}?v={{ $v }}" alt="Hourly precipitation over the last 24 hours" loading="lazy">{{ end }}
     <p class="conditions__note">Rainfall matters here because it drives the
     sewer overflows behind water quality advisories.</p>
     <p class="conditions__source">
@@ -161,9 +168,9 @@
     <p>{{ $s.active_count }} of {{ $s.total_count }} NYC waterbodies are on advisory right now.</p>
     {{- with $s.rainfall }}
     <p>Rainfall at the {{ .gauge }} gauge: {{ printf "%.2f" .last_24h_inches }} in over 24 hours{{ if gt .window_hours 24 }}, {{ printf "%.2f" .window_total_inches }} in over {{ .window_hours }} hours{{ end }}. An advisory can outlast the rain that caused it.</p>
-    {{- with .image }}<img src="{{ . }}" alt="Hourly rainfall at the gauge behind the advisory" loading="lazy">{{ end }}
+    {{- with .image }}<img src="{{ . }}?v={{ $v }}" alt="Hourly rainfall at the gauge behind the advisory" loading="lazy">{{ end }}
     {{- end }}
-    {{- with $s.map_image }}<img src="{{ . }}" alt="Map of NYC waterbodies on advisory, with the Hudson highlighted" loading="lazy">{{ end }}
+    {{- with $s.map_image }}<img src="{{ . }}?v={{ $v }}" alt="Map of NYC waterbodies on advisory, with the Hudson highlighted" loading="lazy">{{ end }}
     {{- with $s.class_description }}<p class="conditions__note">{{ $s.waterbody }} is DEC class {{ $s.water_class }}: {{ . | lower }}.</p>{{ end }}
     <p class="conditions__source">
       <a href="{{ $s.source_url }}" target="_blank" rel="noopener">NYC DEP Waterbody Advisory dashboard</a>
