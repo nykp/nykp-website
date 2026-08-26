@@ -14,16 +14,36 @@ dev = { cmd = "hugo server --configDir=config --buildDrafts --buildFuture --disa
 build = { cmd = "hugo --environment=production --configDir=config --gc --minify", depends-on = ["setup"] }
 # Build the Pagefind search index (run after build)
 index = "npx -y pagefind --site public"
-# Fetch the Hudson conditions into data/ + static/ for the conditions page.
-# The deploy workflow runs this before `build`; run it locally before `dev` if
-# you want the page populated. Needs the nykp_conditions package:
-#   pip install git+https://github.com/nykp/nykp-conditions
-conditions = """nykp-conditions web-export \
-    --out data/conditions.json \
-    --img-dir static/img/conditions \
-    --img-url /img/conditions"""
 
 [dependencies]
 hugo = ">=0.164.0,<0.165"
 nodejs = ">=26.5.0,<26.6"
 dart-sass = ">=1.101.3,<2"
+
+# The conditions export lives in its own feature so the default environment
+# stays a Hugo + Node toolchain. Someone editing content shouldn't have to
+# download matplotlib and pandas to run `pixi run dev`.
+[feature.conditions.dependencies]
+python = ">=3.13,<3.14"
+
+# nykp-conditions installs from git into .pixi/envs/conditions -- no global
+# pip install, and nothing on the system PATH. uv resolves it to a specific
+# commit in pixi.lock, so a build is reproducible; `pixi update nykp-conditions`
+# is what moves it forward.
+[feature.conditions.pypi-dependencies]
+nykp-conditions = { git = "https://github.com/nykp/nykp-conditions.git" }
+
+[feature.conditions.tasks]
+# Fetch the Hudson conditions into data/ + static/ for the conditions page.
+# The deploy workflow runs this before `build`; run it locally before `dev` if
+# you want the page populated. `pixi run conditions` finds this environment on
+# its own, since no other environment defines the task.
+conditions = { cmd = """nykp-conditions web-export \
+    --out data/conditions.json \
+    --img-dir static/img/conditions \
+    --img-url /img/conditions""", env = { MPLBACKEND = "Agg" } }
+
+[environments]
+# Solved together, so the two environments can't disagree about a shared package.
+default = { solve-group = "default" }
+conditions = { features = ["conditions"], solve-group = "default" }

@@ -84,18 +84,48 @@ KB to git history every day, and a rebuilt page is as fresh as its build.
 To populate the page locally:
 
 ```bash
-pip install git+https://github.com/nykp/nykp-conditions
 pixi run conditions     # writes data/conditions.json + static/img/conditions/
 pixi run dev
 ```
 
-Installing that package puts a `nykp-conditions` command on the PATH, which is
-what `pixi run conditions` calls — so it has to be installed somewhere on your
-PATH (a virtualenv you have active, or a `pipx install`). Its own README
-documents the other subcommands.
+No `pip install` needed. `nykp-conditions` is a git dependency of the
+`conditions` pixi environment, so `pixi run conditions` installs it into
+`.pixi/envs/conditions/` on first run and nothing lands on your system PATH.
+The environment is separate from `default` on purpose: editing content
+shouldn't cost you a matplotlib and pandas download, so `pixi run dev` and
+`pixi run build` never install it. `pixi run conditions` picks the right
+environment on its own, since no other environment defines that task.
 
 Without that step the page renders a short note saying so, so `pixi run dev`
 still works for everything else.
+
+### Moving to a newer nykp-conditions
+
+`pixi.lock` pins nykp-conditions to a **specific commit**, so CI and your
+machine run identical code. `pixi install` will not move it, even if you edit
+the manifest — the git URL alone counts as satisfied. Re-resolve explicitly:
+
+```bash
+pixi update nykp-conditions     # then commit pixi.lock
+```
+
+This pins the export *code*, not the data — every run fetches live readings,
+so the daily rebuild is as fresh as it ever was. Only picking up a
+nykp-conditions change needs the update.
+
+To try a branch of nykp-conditions against this site, point the dependency at
+it in `pixi.toml`, then re-resolve:
+
+```toml
+[feature.conditions.pypi-dependencies]
+nykp-conditions = { git = "https://github.com/nykp/nykp-conditions.git", branch = "my-branch" }
+```
+
+```bash
+pixi update nykp-conditions && pixi run conditions && pixi run dev
+```
+
+Revert both the manifest and the lock when you're done.
 
 ### Freshness
 
