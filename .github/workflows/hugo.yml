@@ -44,11 +44,13 @@ jobs:
       # The Hudson conditions page is generated at build time rather than
       # committed: the plots would add hundreds of KB to git history every day,
       # and a rebuilt page is always as fresh as its build.
-      - name: Set up Python for the conditions export
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-
+      #
+      # nykp-conditions comes from the `conditions` pixi environment, pinned in
+      # pixi.lock, so CI and a developer's machine run the same commit. This
+      # pins the export *code*, not the data -- every run still fetches live
+      # readings, so the daily rebuild stays as fresh as it ever was. Moving to
+      # a newer nykp-conditions is deliberate: `pixi update nykp-conditions`.
+      #
       # continue-on-error, deliberately. A NOAA outage must not block an
       # unrelated content change from deploying. web_export already exits 0
       # with sections marked unavailable; this covers the harder failures
@@ -56,14 +58,7 @@ jobs:
       # "conditions haven't been generated for this build".
       - name: Fetch Hudson conditions
         continue-on-error: true
-        env:
-          MPLBACKEND: Agg
-        run: |
-          pip install --quiet git+https://github.com/nykp/nykp-conditions
-          nykp-conditions web-export \
-            --out data/conditions.json \
-            --img-dir static/img/conditions \
-            --img-url /img/conditions
+        run: pixi run conditions
 
       # `pixi run build` also runs the `setup` task (npm install) first.
       # Trailing args are appended to the task's hugo command; --baseURL wins.
