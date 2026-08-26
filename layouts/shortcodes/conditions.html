@@ -165,7 +165,8 @@
     {{- else }}
     <p><strong>No advisory</strong> for {{ $s.waterbody }} as of {{ $s.occurred_on_display }}.</p>
     {{- end }}
-    <p>{{ $s.active_count }} of {{ $s.total_count }} NYC waterbodies are on advisory right now.</p>
+    <p>{{ $s.active_count }} of {{ $s.total_count }} NYC waterbodies are on advisory right now
+    {{- if and (not $s.active) $s.elsewhere_active_count }} — none of them {{ $s.waterbody }}{{ end }}.</p>
     {{- with $s.rainfall }}
     <p>Rainfall at the {{ .gauge }} gauge: {{ printf "%.2f" .last_24h_inches }} in over 24 hours{{ if gt .window_hours 24 }}, {{ printf "%.2f" .window_total_inches }} in over {{ .window_hours }} hours{{ end }}. An advisory can outlast the rain that caused it.</p>
     {{- with .image }}<img src="{{ . }}?v={{ $v }}" alt="Hourly rainfall at the gauge behind the advisory" loading="lazy">{{ end }}
@@ -179,24 +180,6 @@
     {{- partial "conditions-unavailable.html" (dict "what" "Advisory status" "url" "https://nycwaterbodyadvisory.azurewebsites.net/" "name" "the DEP dashboard") }}
     {{- end }}
   </section>
-  {{- end }}
-
-  {{/* ------------------------------------------------------------------ */}}
-  {{- with $s := index $sections "notify_advisories" }}
-  {{- if and (eq $s.status "ok") $s.alerts }}
-  <section class="conditions__section">
-    <h2>Notify NYC alerts</h2>
-    {{- range $s.alerts }}
-    <div class="conditions__alert conditions__alert--muted">
-      <p><strong>{{ .title }}</strong>{{ with .published_display }} — {{ . }}{{ end }}</p>
-      {{- with .summary }}<p>{{ . }}</p>{{ end }}
-    </div>
-    {{- end }}
-    <p class="conditions__source">
-      <a href="{{ $s.source_url }}" target="_blank" rel="noopener">Notify NYC feed</a>
-    </p>
-  </section>
-  {{- end }}
   {{- end }}
 
   {{- with $c.unavailable }}
