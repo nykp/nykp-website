@@ -8,7 +8,11 @@ images: ["/img/action-3.jpg"]
 Our schedule lives on Meetup. Sessions vary week to week with the season, the tides, and who is hosting, so Meetup — not this page — is the authoritative source for when we are on the water and what each session will be.
 {{< /intro >}}
 
-{{< button link="https://www.meetup.com/NYkayakpolo/events/" text="See upcoming sessions on Meetup" >}}
+## Upcoming sessions
+
+{{< meetup-events >}}
+
+{{< button link="https://www.meetup.com/NYkayakpolo/events/" text="See all sessions on Meetup" >}}
 
 ## How to use our Meetup listings
 

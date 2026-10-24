@@ -157,6 +157,50 @@ DEP dashboard serves partial lists while warming up, so the package refetches
 until the list is complete and fails the section rather than reporting a
 citywide advisory count off a short list.
 
+## Upcoming sessions
+
+The home page shows the next three sessions from our
+[Meetup group](https://www.meetup.com/nykayakpolo/events/), and the Schedule
+page the next ten. Cancelled sessions are left out. `scripts/meetup_events.py`
+writes them to `data/events.json` (gitignored), and
+`layouts/shortcodes/meetup-events.html` renders them —
+`{{</* meetup-events limit=3 */>}}` caps how many a page shows.
+
+```bash
+pixi run events     # writes data/events.json
+pixi run dev
+```
+
+The `events` pixi environment is just Python — the script is standard library
+only — and it uses **no Meetup API credentials**. Two public sources:
+
+- **The group's iCal feed** (`meetup.com/nykayakpolo/events/ical/`) supplies the
+  list. New events show up in it promptly.
+- **Each event's own page** supplies the status. The feed never reflects a
+  cancellation — a cancelled event stays `STATUS:CONFIRMED` — but the page's
+  schema.org structured data (what Meetup publishes for search engines) says
+  `EventCancelled`. Cancelled and postponed events are dropped, and the page
+  also wins on title and times, in case an edit is slow to reach the feed.
+  Pages are checked in date order only until the list is full.
+
+It refreshes with every deploy: each push to `main`, and the morning
+cron-job.org dispatch that also rebuilds the conditions page (see
+[Freshness](#freshness)). A session cancelled after that build stays listed
+until the next one, which is why the list tells people to check Meetup before
+heading out. To refresh sooner, use **Actions → Deploy Hugo site → Run
+workflow**.
+
+When Meetup misbehaves:
+
+- **An event page can't be read, or its structured data changes shape.** That
+  event is listed as the feed has it — no worse than the feed alone — and the
+  workflow run gets a warning annotation.
+- **The feed can't be read** (or comes back as something other than a
+  calendar). The page says Meetup couldn't be reached and links there. It
+  never claims nothing is scheduled because of a failed fetch.
+- **The script itself fails.** The workflow step is `continue-on-error`, and
+  the page falls back to a link to Meetup.
+
 ## Theme customizations
 
 The theme lives in `themes/dot-org-hugo-theme` as a pinned git submodule — it never
