@@ -60,6 +60,15 @@ jobs:
         continue-on-error: true
         run: pixi run conditions
 
+      # Upcoming Meetup sessions for the Schedule page, from the group's public
+      # calendar feed -- no Meetup credentials. Generated per build and not
+      # committed, like the conditions. The script already exits 0 when Meetup
+      # is unreachable; continue-on-error covers the harder failures, where the
+      # page falls back to a link to Meetup.
+      - name: Fetch upcoming Meetup sessions
+        continue-on-error: true
+        run: pixi run events
+
       # `pixi run build` also runs the `setup` task (npm install) first.
       # Trailing args are appended to the task's hugo command; --baseURL wins.
       - name: Build site

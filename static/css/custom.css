@@ -109,7 +109,7 @@
   height: 54px;
   width: auto;
 }
-/* Larger variant — add class "img-button--lg" (used for the Meetup button) */
+/* Larger variant — add class "img-button--lg" */
 .img-button--lg img {
   height: 76px;
 }
@@ -211,4 +211,60 @@
   max-width: 100%;
   height: auto;
   margin: 16px 0;
+}
+
+/* ==========================================================================
+   Upcoming sessions (home and Schedule pages)
+   Rendered by layouts/shortcodes/meetup-events.html from data/events.json.
+   ========================================================================== */
+
+.events__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.events__item {
+  border-left: 3px solid var(--primary-400);
+  padding: 10px 0 10px 14px;
+  margin-bottom: 12px;
+}
+.events__item p {
+  margin: 0;
+}
+
+.events__when {
+  font-weight: 700;
+}
+.events__time {
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.events__title {
+  font-size: 1.1rem;
+}
+
+.events__where {
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
+
+.events__stamp {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  border-left: 3px solid var(--nykp-yellow);
+  padding-left: 12px;
+}
+
+.events__unavailable {
+  border-left: 3px solid #999;
+  padding-left: 12px;
+  opacity: 0.9;
+}
+
+.events--missing {
+  border: 1px dashed #999;
+  padding: 16px 20px;
+  border-radius: 4px;
 }

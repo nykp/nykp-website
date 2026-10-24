@@ -15,9 +15,13 @@ showHeader: false
 New York Kayak Polo is devoted to developing and promoting the sport of kayak polo (also known as canoe polo) in the New York City area. Everybody is welcome to come and learn this exciting sport!
 {{< /intro >}}
 
-<a class="img-button img-button--lg" href="https://www.meetup.com/NYkayakpolo/" target="_blank" rel="noopener"><img src="/img/buttons/meetup-logo.png" alt="Join us on Meetup"></a>
+Come and play with us — **your first session is free!**
 
-Come and play with us — **your first session is free!** Stay up to date on our latest scheduled events at our Meetup page.
+## Upcoming sessions
+
+{{< meetup-events limit=3 >}}
+
+See the [full schedule](/schedule/), or [join our Meetup group](https://www.meetup.com/NYkayakpolo/) to hear about new sessions as they're posted.
 
 ## Support us
 

@@ -20,6 +20,10 @@ hugo_stats.json
 /data/conditions.json
 /static/img/conditions/
 
+# Upcoming Meetup sessions, generated at build time by `pixi run events`.
+# Not committed for the same reason: the deploy regenerates it every time.
+/data/events.json
+
 # OS files
 .DS_Store
 

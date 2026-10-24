@@ -43,7 +43,21 @@ conditions = { cmd = """nykp-conditions web-export \
     --img-dir static/img/conditions \
     --img-url /img/conditions""", env = { MPLBACKEND = "Agg" } }
 
+# Upcoming Meetup sessions for the Schedule page. The script is standard library
+# only, so this environment is just Python -- nothing to pin but the
+# interpreter, and no Meetup credentials. Like `conditions`, the deploy
+# workflow runs it before `build`; locally, `pixi run events` finds this
+# environment on its own.
+[feature.events.dependencies]
+python = ">=3.13,<3.14"
+
+[feature.events.tasks]
+events = "python scripts/meetup_events.py --out data/events.json"
+
 [environments]
 # Solved together, so the two environments can't disagree about a shared package.
 default = { solve-group = "default" }
 conditions = { features = ["conditions"], solve-group = "default" }
+# Just Python: it needs none of the default feature's Hugo + Node, and staying
+# out of the solve group means adding it didn't re-resolve the conditions pins.
+events = { features = ["events"], no-default-feature = true }
