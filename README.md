@@ -43,7 +43,7 @@ All page text is in **`content/en/`** as Markdown — edit these, no coding requ
 | File | Page |
 |---|---|
 | `_index.md`     | Home |
-| `about.md`      | About (club structure + leadership committee) |
+| `about.md`      | About (club structure, leadership committee, and contact info; `/contact/` redirects here) |
 | `game.md`       | The Game (rules) |
 | `schedule.md`   | Schedule |
 | `membership.md` | Membership |
@@ -51,7 +51,6 @@ All page text is in **`content/en/`** as Markdown — edit these, no coding requ
 | `conditions.md` | Hudson Conditions (intro text; the data is generated — see below) |
 | `events.md`     | Events and tournaments |
 | `links.md`      | Links |
-| `contact.md`    | Contact |
 
 - **Navigation menu, footer, social links, and calls-to-action** live in
   `config/_default/languages.yaml` and `config/_default/params.yaml`.

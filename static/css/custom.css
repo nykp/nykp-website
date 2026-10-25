@@ -62,10 +62,14 @@
   width: 100%;
 }
 
-/* Bigger logo in the top nav bar (theme caps it at 40px/50px tall) */
+/* Bigger logo in the top nav bar (theme caps it at 40px/50px tall).
+   width: auto because the theme's <img> carries width="150": with the
+   max-width cap lifted, the box would stay 150px wide while the square logo
+   draws only its height's worth of it, leaving dead space before the menu. */
 .header .logo {
   max-width: none;
   max-height: 56px;
+  width: auto;
 }
 @media (min-width: 1000px) {
   .header .logo {
@@ -90,6 +94,39 @@
 .content ul + p,
 .content ol + p {
   margin-top: 14px;
+}
+
+/* Header menu: eight flat items. The theme spaces top-level items for a
+   shorter menu (20px apart from 1000px, 60px from 1250px), which forced the
+   two-word names ("Hudson Conditions") onto two lines and pushed the search
+   icon off the edge at ~1024px. Keep names on one line and tighten the gaps.
+   Below 1000px the theme's hamburger menu takes over and none of this applies. */
+@media (min-width: 1000px) {
+  /* The theme puts 50-75px between the logo and the menu. */
+  .main-menu {
+    margin-left: 20px;
+  }
+  .main-menu .top-menu-item {
+    margin-right: 10px;
+  }
+  .main-menu .top-menu-item > a {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .main-menu .main-menu-search svg {
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1250px) {
+  .main-menu {
+    margin-left: 26px;
+  }
+  .main-menu .top-menu-item {
+    margin-right: 26px;
+  }
+  .main-menu .top-menu-item > a {
+    font-size: 16px;
+  }
 }
 
 /* Image buttons (Meetup / Donate graphics dropped in static/img/buttons/) */

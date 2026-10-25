@@ -52,9 +52,9 @@ Our not-for-profit club is run by its members. Benefits include:
 
 New York Kayak Polo receives insurance coverage from Paddlesport Risk Management.
 
-Everyone participating in a NYKP session, tournament, or other event on the water needs to have signed a waiver for the current calendar year. Electronic waivers are significantly easier for us to manage — please [contact us](/contact/) to get the link.
+Everyone participating in a NYKP session, tournament, or other event on the water needs to have signed a waiver for the current calendar year. Electronic waivers are significantly easier for us to manage — please [contact us](/about/#contact-us) to get the link.
 
-The club is run by its members and led by an elected Leadership Committee — [read more about us](/about/). Please [contact us](/contact/) for more information!
+The club is run by its members and led by an elected Leadership Committee — [read more about us](/about/). Please [contact us](/about/#contact-us) for more information!
 
 {{< spacer 10 >}}
 
