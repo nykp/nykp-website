@@ -203,8 +203,10 @@ def apply_page(event, item):
     if item.get("endDate"):
         event["end"] = datetime.fromisoformat(item["endDate"]).astimezone(TZ)
     place = item.get("location") or {}
-    town = (place.get("address") or {}).get("addressLocality")
-    event["location"] = ", ".join(part for part in (place.get("name"), town) if part) or None
+    address = place.get("address") or {}
+    event["venue"] = place.get("name")
+    event["address"] = address.get("streetAddress")
+    event["location"] = ", ".join(part for part in (place.get("name"), address.get("addressLocality")) if part) or None
 
 
 # --- Output ---------------------------------------------------------------------
@@ -238,6 +240,10 @@ def to_output(event):
         "date_display": date_display,
         "time_display": time_display,
         "location": event.get("location"),
+        # Meetup's venue name, which data/venues.yaml maps to a Google Maps
+        # link, and its street address for venues that file doesn't list.
+        "venue": event.get("venue"),
+        "address": event.get("address"),
         # "scheduled", or "unverified" when the event page couldn't be read
         # and the event is listed as the feed has it.
         "status": event.get("status", "unverified"),

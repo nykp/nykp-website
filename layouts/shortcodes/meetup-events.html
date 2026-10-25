@@ -10,7 +10,7 @@
        (a local `pixi run dev` without `pixi run events` first) and Meetup being
        unreachable when the site was built. Both say so and link to Meetup. */ -}}
 
-{{- $e := site.Data.events -}}
+{{- $e := hugo.Data.events -}}
 {{- $meetup := "https://www.meetup.com/nykayakpolo/events/" -}}
 {{- $limit := int (.Get "limit" | default 0) -}}
 
@@ -43,16 +43,30 @@
 <div class="events">
   {{- with $upcoming }}
   <ul class="events__list">
-    {{- range . }}
+    {{- range $ev := . }}
     <li class="events__item">
       <p class="events__when">
-        <span class="events__date">{{ .date_display }}</span>
-        <span class="events__time">{{ .time_display }}</span>
+        <span class="events__date">{{ $ev.date_display }}</span>
+        <span class="events__time">{{ $ev.time_display }}</span>
       </p>
       <p class="events__title">
-        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        <a href="{{ $ev.url }}" target="_blank" rel="noopener">{{ $ev.title }}</a>
       </p>
-      {{- with .location }}<p class="events__where">{{ . }}</p>{{ end }}
+      {{- with $ev.location }}
+      {{- /* Known venues use the same hand-picked Maps link as the Location
+             page (data/venues.yaml). Anything else gets a Maps search for its
+             name and address. */ -}}
+      {{- $maps := "" -}}
+      {{- with $ev.venue }}{{ with index (hugo.Data.venues | default dict) . }}{{ $maps = .maps }}{{ end }}{{ end -}}
+      {{- if not $maps -}}
+        {{- $parts := slice -}}
+        {{- range slice $ev.venue $ev.address }}{{ with . }}{{ $parts = $parts | append . }}{{ end }}{{ end -}}
+        {{- with $parts }}{{ $maps = printf "https://www.google.com/maps/search/?api=1&query=%s" (delimit . ", " | urlquery) }}{{ end -}}
+      {{- end }}
+      <p class="events__where">
+        {{- with $maps }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $ev.location }}</a>{{ else }}{{ . }}{{ end -}}
+      </p>
+      {{- end }}
     </li>
     {{- end }}
   </ul>

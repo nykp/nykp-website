@@ -163,7 +163,10 @@ The home page shows the next three sessions from our
 page the next ten. Cancelled sessions are left out. `scripts/meetup_events.py`
 writes them to `data/events.json` (gitignored), and
 `layouts/shortcodes/meetup-events.html` renders them —
-`{{</* meetup-events limit=3 */>}}` caps how many a page shows.
+`{{</* meetup-events limit=3 */>}}` caps how many a page shows. Each
+session's location links to Google Maps: venues listed in `data/venues.yaml`
+(keyed by Meetup's venue name) use the same hand-picked links as the Location
+page, and any other venue gets a Maps search for its name and address.
 
 ```bash
 pixi run events     # writes data/events.json

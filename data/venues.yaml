@@ -1,0 +1,10 @@
+# Google Maps links for the venues our Meetup events use, keyed by the venue
+# name exactly as Meetup has it. layouts/shortcodes/meetup-events.html links
+# each session's location here -- the same links as the Location page, so keep
+# the two in step. A venue missing from this file still gets a link, to a Maps
+# search for its name and address, which is fine for a one-off but poor for
+# Pier 66, whose Meetup "address" is a sentence.
+"Pier 66 Boathouse":
+  maps: "https://maps.app.goo.gl/mg9ewUiWyXXF3Uvr9"
+"Yanitelli Recreational Life Center":
+  maps: "https://maps.app.goo.gl/CY9ozTQ5y4fQEuuF9"
