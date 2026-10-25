@@ -98,31 +98,28 @@
 
 /* Header menu: eight flat items. The theme spaces top-level items for a
    shorter menu (20px apart from 1000px, 60px from 1250px), which forced the
-   two-word names ("Hudson Conditions") onto two lines and pushed the search
-   icon off the edge at ~1024px. Keep names on one line and tighten the gaps.
+   two-word names ("Hudson Conditions") onto two lines and ran the menu off
+   the edge at ~1024px. Keep names on one line and tighten the gaps.
    Below 1000px the theme's hamburger menu takes over and none of this applies. */
 @media (min-width: 1000px) {
   /* The theme puts 50-75px between the logo and the menu. */
   .main-menu {
-    margin-left: 20px;
+    margin-left: 24px;
   }
   .main-menu .top-menu-item {
-    margin-right: 10px;
+    margin-right: 14px;
   }
   .main-menu .top-menu-item > a {
     white-space: nowrap;
     font-size: 14px;
   }
-  .main-menu .main-menu-search svg {
-    margin-left: 10px;
-  }
 }
 @media (min-width: 1250px) {
   .main-menu {
-    margin-left: 26px;
+    margin-left: 32px;
   }
   .main-menu .top-menu-item {
-    margin-right: 26px;
+    margin-right: 32px;
   }
   .main-menu .top-menu-item > a {
     font-size: 16px;

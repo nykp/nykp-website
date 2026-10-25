@@ -15,8 +15,8 @@ installed globally. After cloning, run everything through `pixi run …`.
 | `pixi run setup` | Install Node build deps (runs automatically before `dev`/`build`) |
 | `pixi run dev`   | Start a local preview at <http://localhost:1313> with live reload |
 | `pixi run build` | Build the production site into `./public` |
-| `pixi run index` | Rebuild the Pagefind search index (CI does this automatically) |
 | `pixi run conditions` | Fetch Hudson conditions for the `/conditions/` page (CI does this automatically) |
+| `pixi run events` | Fetch upcoming Meetup sessions for the home and Schedule pages (CI does this automatically) |
 
 > **Why pixi *and* npm?** pixi manages the *environment* — it pins the exact `hugo` and
 > `node` versions in `pixi.lock` (for both macOS and Linux/CI). The theme's build

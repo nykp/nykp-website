@@ -40,5 +40,5 @@ social_links:
 
 # Makes the header sticky on tall screens
 sticky_header: true
-# Enable search in header UI
-show_search: true
+# No site search: the menu covers every page.
+show_search: false

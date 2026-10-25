@@ -74,9 +74,6 @@ jobs:
       - name: Build site
         run: pixi run build --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Build Pagefind search index
-        run: pixi run index
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

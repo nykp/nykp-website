@@ -12,8 +12,6 @@ setup = "npm install"
 dev = { cmd = "hugo server --configDir=config --buildDrafts --buildFuture --disableFastRender", depends-on = ["setup"] }
 # Build the production site into ./public
 build = { cmd = "hugo --environment=production --configDir=config --gc --minify", depends-on = ["setup"] }
-# Build the Pagefind search index (run after build)
-index = "npx -y pagefind --site public"
 
 [dependencies]
 hugo = ">=0.164.0,<0.165"
