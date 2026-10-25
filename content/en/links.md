@@ -10,11 +10,11 @@ A curated collection of kayak polo and paddling resources — rules and coaching
 
 ## Kayak polo: the game
 
-- [ICF Canoe Polo rules](https://www.canoeicf.com/rules#polo) — the official rulebook
-- [ICF Canoe Polo discipline page](https://www.canoeicf.com/discipline/canoe-polo) — see the Refereeing section for an online referee course
+- [Official Canoe Polo rules](https://paddleworldwide.com/rules#polo) — the official rulebook
+- [Paddle Worldwide Canoe Polo discipline page](https://paddleworldwide.com/disciplines/canoe-polo) — see the Refereeing section for an online referee course
 - [Referee hand signals](http://red-e.s3.amazonaws.com/Canoe%20Polo%20Rules%20Summary/index.html)
 - [*Boat, Paddle and Ball*](https://www.nomadkayakclub.co.uk/wp-content/uploads/2012/02/Canoe-polo-history.pdf) — a short history of canoe polo by Ian Beasley (PDF)
-- [A history of canoe polo](https://www.canoeicf.com/disciplines/canoe-polo/history) — the ICF's account of the sport's origins
+- [A history of canoe polo](https://paddleworldwide.com/disciplines/canoe-polo/history) — Paddle Worldwide's account of the sport's origins
 - [NZ Canoe Polo coaching materials](https://www.nzcanoepolo.org.nz/coaching-1)
 
 ## US clubs

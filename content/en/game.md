@@ -5,14 +5,20 @@ images: ["/img/action-2.jpg"]
 ---
 
 {{< intro >}}
-Kayak polo — canoe polo, officially — is a team ball sport played in kayaks. A combination of water polo, basketball, and bumper boats, players pass and shoot a water polo ball while maneuvering to set up screens and drives.
+Kayak polo (also known as canoe polo) is a team ball sport played in kayaks. A combination of water polo, basketball, and bumper boats, players pass and shoot a water polo ball while maneuvering to set up screens and drives.
 {{< /intro >}}
 
 Canoe polo can be played on any calm body of water, often either on a lake in the summer or a pool in the winter. A full-size pitch is 35 by 23 meters, with goals on each end suspended two meters above the water. Two teams of five try to score on each other, with the attacking team trying to move the ball down the pitch and get it into the net. The defending team's goalie sits under the goal and tries to block shots with their paddle, while the other four attempt to hold their defensive formation and prevent drives that can result in a goal.
 
 What makes this ball sport so unique is the boat. Every decision is also a boat decision — where you are pointing, how fast you are moving, whether you can turn before the player you are marking does. Contact is part of the game, and so is the occasional capsize; rolling back upright is a crucial skill. While the learning curve can be a challenge to new paddlers, it is hard to come up with a more fun way to develop advanced kayaking skills than playing kayak polo.
 
-The sport is played on every continent, for recreation and at a high competitive level, with World Championships every two years. It is governed internationally by the Canoe Polo Committee of the [International Canoe Federation](https://www.canoeicf.com/disciplines/canoe-polo).
+The sport is played on every continent, for recreation and at a high competitive level, with World Championships every two years. It is governed internationally by the Canoe Polo Committee of [Paddle Worldwide](https://paddleworldwide.com/disciplines/canoe-polo).
+
+## Learn the skills
+
+Paddle Worldwide's official *How To: Canoe Polo* series covers the fundamentals in 25 short videos, about a minute each: the equipment, getting in and out of the boat, paddle strokes and bracing, then catching, passing, shooting, and goalkeeping. They play in order, starting from Episode 1.
+
+{{< youtube-series title="How To: Canoe Polo (Official ICF Series)" list="PLWpi79GxUJdYFoNxdEZdZ-V0htLsL1TSE" ids="x5j1RRuidNo,14vGI72XPM4,GPRiNzGr50Y,-DqjWmezuDk,DPhEQIrPLCs,HrTNQSLYIuM,L4BdWzWkgoc,chjLmaKuoV4,pH4KYkTckEg,qFZOLlv_Hvo,LJmpE5oc8xI,yq8StwnVWgs,Da4O83fwqAI,EZFpy7jYec4,oQRFzC3Q7B0,OllcSTmpxi8,_FZakVKJT38,iqsJIXRHshI,_EYK-ltV_KA,oi4RgG8krPM,uYfZppS3UTk,4kN8X5TX2ts,7Qex1heo4iw,NpDAoWqfGag,TznJJD7EY4o" >}}
 
 ## How it's played
 
@@ -28,7 +34,7 @@ The sport is played on every continent, for recreation and at a high competitive
 
 **Penalties.** The usual sanction is loss of possession: the other team restarts with a free throw or shot from either the point of the foul, or the side or goal line, depending on the circumstance. Serious or repeated fouls bring penalty shots and cards.
 
-The full rules are worth a read if you want the detail — see the [ICF Canoe Polo rules](https://www.canoeicf.com/rules#polo) and our [Links](/links/) page for rules and coaching resources.
+The full rules are worth a read if you want the detail — see the [Official Canoe Polo rules](https://paddleworldwide.com/rules#polo) and our [Links](/links/) page for rules and coaching resources.
 
 ## The pitch, the goals, the clock
 
@@ -37,9 +43,3 @@ The goals measure 1 by 1.5 meters: a netted frame hanging two meters above the w
 A match is 20 minutes — two 10-minute halves, swapping ends at the break. Each half starts with a sprint: both teams line up on their own goal line, the referee throws the ball into the center of the pitch, and one player from each side races for it.
 
 Properly officiated matches are run by two referees, one on each side line, on foot rather than in boats, supported by a scorekeeper, a timekeeper, and two line judges.
-
-## Learn the skills
-
-The ICF's official *How To: Canoe Polo* series covers the fundamentals in 25 short videos, about a minute each: the equipment, getting in and out of the boat, paddle strokes and bracing, then catching, passing, shooting, and goalkeeping. They play in order, starting from Episode 1.
-
-{{< youtube-series title="How To: Canoe Polo (Official ICF Series)" list="PLWpi79GxUJdYFoNxdEZdZ-V0htLsL1TSE" ids="x5j1RRuidNo,14vGI72XPM4,GPRiNzGr50Y,-DqjWmezuDk,DPhEQIrPLCs,HrTNQSLYIuM,L4BdWzWkgoc,chjLmaKuoV4,pH4KYkTckEg,qFZOLlv_Hvo,LJmpE5oc8xI,yq8StwnVWgs,Da4O83fwqAI,EZFpy7jYec4,oQRFzC3Q7B0,OllcSTmpxi8,_FZakVKJT38,iqsJIXRHshI,_EYK-ltV_KA,oi4RgG8krPM,uYfZppS3UTk,4kN8X5TX2ts,7Qex1heo4iw,NpDAoWqfGag,TznJJD7EY4o" >}}
