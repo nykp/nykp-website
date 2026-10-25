@@ -1,0 +1,23 @@
+{{- /* A YouTube series embedded to play in a set order.
+
+       Usage: {{< youtube-series title="…" list="PL…" ids="first,second,…" >}}
+
+       `ids` sets the play order. The theme's youtube_enhanced shortcode can't
+       do this: given a playlist it always starts at the playlist's first item,
+       and the ICF's How To series is listed newest first (Episode 25 first).
+       `list` is only for the "on YouTube" link. */ -}}
+{{- $ids := split (.Get "ids") "," -}}
+{{- $title := .Get "title" -}}
+{{- /* safeURL keeps the commas literal; Hugo would otherwise encode them. */ -}}
+{{- /* The first id goes in `playlist` as well as the path: with only the
+       rest listed, YouTube starts at the second video. */ -}}
+{{- $src := printf "https://www.youtube-nocookie.com/embed/%s?playlist=%s&rel=0" (index $ids 0) (delimit $ids ",") -}}
+<div class="video-series">
+  <iframe src="{{ $src | safeURL }}"
+    title="{{ $title }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+{{- with .Get "list" }}
+<p class="video-series__link"><a href="https://www.youtube.com/playlist?list={{ . }}" target="_blank" rel="noopener">{{ $title }}</a> on YouTube</p>
+{{- end }}

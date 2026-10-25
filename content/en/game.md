@@ -37,3 +37,9 @@ The goals measure 1 by 1.5 meters: a netted frame hanging two meters above the w
 A match is 20 minutes — two 10-minute halves, swapping ends at the break. Each half starts with a sprint: both teams line up on their own goal line, the referee throws the ball into the center of the pitch, and one player from each side races for it.
 
 Properly officiated matches are run by two referees, one on each side line, on foot rather than in boats, supported by a scorekeeper, a timekeeper, and two line judges.
+
+## Learn the skills
+
+The ICF's official *How To: Canoe Polo* series covers the fundamentals in 25 short videos, about a minute each: the equipment, getting in and out of the boat, paddle strokes and bracing, then catching, passing, shooting, and goalkeeping. They play in order, starting from Episode 1.
+
+{{< youtube-series title="How To: Canoe Polo (Official ICF Series)" list="PLWpi79GxUJdYFoNxdEZdZ-V0htLsL1TSE" ids="x5j1RRuidNo,14vGI72XPM4,GPRiNzGr50Y,-DqjWmezuDk,DPhEQIrPLCs,HrTNQSLYIuM,L4BdWzWkgoc,chjLmaKuoV4,pH4KYkTckEg,qFZOLlv_Hvo,LJmpE5oc8xI,yq8StwnVWgs,Da4O83fwqAI,EZFpy7jYec4,oQRFzC3Q7B0,OllcSTmpxi8,_FZakVKJT38,iqsJIXRHshI,_EYK-ltV_KA,oi4RgG8krPM,uYfZppS3UTk,4kN8X5TX2ts,7Qex1heo4iw,NpDAoWqfGag,TznJJD7EY4o" >}}

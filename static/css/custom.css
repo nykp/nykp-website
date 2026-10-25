@@ -305,3 +305,18 @@
   padding: 16px 20px;
   border-radius: 4px;
 }
+
+/* In-order YouTube series (layouts/shortcodes/youtube-series.html) */
+.video-series {
+  aspect-ratio: 16 / 9;
+  margin: 24px 0 8px;
+}
+.video-series iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-series__link {
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
